@@ -25,3 +25,18 @@
   </body>
 </html>
 ```
+
+----
+
+<a href="https://github.com/dudcks5477/Front-end/tree/master/Start/ex3.html">CSS, JS 연결하기</a>
+```HTML
+<head>
+  <!-- JS 연결 -->
+  <script src="./ex3.js"></script>
+  <!-- CSS 연결 -->
+  <link rel="stylesheet" href="./ex3.css">
+</head>
+```
+- **lang**(language 단어의 약어)은 지정할 문서의 언어(ISO 639-1)를 명시하는 HTML 속성이다.
+- 지정 가능한 언어 목록은 다음 링크에서 확인할 수 있다. <br>
+<a href="https://ko.wikipedia.org/wiki/ISO_639-1_코드_목록">ISO 639-1 코드 목록</a>
