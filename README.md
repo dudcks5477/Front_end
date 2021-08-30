@@ -67,3 +67,90 @@
         - CSS와 JS로 제어 가능
         - 파일 및 코드 삽입 가능 
         - SVG 이미지의 복잡한 코드를 CSS와 JS로 디테일하게 제어하기는 매우 어렵기 때문에, 색상이나 일부 영역의 추가/제거 혹은 간단한 형태 생성 정도로 가볍게 사용한다.
+
+----
+
+## 특수 기호
+### 특수 문자 용어
+- 특수 문자의 영어/한글 이름과 키보드 위치
+1. `
+    - Backtick, Grave
+    - 백틱, 그레이브
+1. ~
+    - Tilde
+    - 틸드, 물결 표시
+1. !
+    - Exclamation mark
+    - 엑스클러메이션, 느낌표
+1. @
+    - At sign
+    - 앳, 골뱅이
+1. '#'
+    - Sharp, Number Sign
+    - 샵, 넘버, 우물 정
+1. $
+    - Dollar Sign
+    - 달러
+1. %
+    - Percent sign
+    - 퍼센트
+1. ^
+    - Caret
+    - 캐럿
+1. &
+    - Ampersand
+    - 엠퍼센드
+1. '*'
+    - Asterisk
+    - 에스터리스크, 별표
+1. '-'
+    - Hyphen, Dash
+    - 하이픈, 대시, 마이너스
+1. _
+    - Underscore, Low dash
+    - 언더스코어, 로대시, 밑줄
+1. =
+    - Equals sign
+    - 이퀄, 동등
+1. "
+    - Quotation mark
+    - 쿼테이션, 큰 따옴표
+1. '
+    - Apostrophe
+    - 아포스트로피, 작은 따옴표
+1. :
+    - Colon
+    - 콜론
+1. ;
+    - Semicolon
+    - 세미콜론
+1. ,
+    - Comma
+    - 콤마, 쉼표
+1. .
+    - Period, Dot
+    - 피리어드, 닷, 점, 마침표
+1. ?
+    - Question mark
+    - 퀘스천, 물음표
+1. /
+    - Slash
+    - 슬래시
+1. |
+    - Vertical bar
+    - 버티컬 바
+1. \
+    - Backslash
+    - 백슬래시, 역 슬래시
+1. ( )
+    - Parenthesis
+    - 퍼렌서시스, 소괄호, 괄호
+1. { }
+    - Barce
+    - 브레이스, 중괄호
+1. [ ]
+    - Bracket
+    - 브래킷, 대괄호
+1. < >
+    - Angle Bracket
+    - 앵글 브래킷, 꺽새 괄호
