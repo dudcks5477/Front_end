@@ -9,8 +9,8 @@
 
 ----
 
-<a href="https://github.com/dudcks5477/Front-end/tree/master/HTML/ex1.html">부모와 자식 관계</a>
-```
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/HTML/ex1.html">부모와 자식 관계</a>
+```html
 <부모><자식>자식 내용</자식></부모>
 
 <부모>
@@ -25,3 +25,28 @@
 ```
 - tab : 들여쓰기(Indent)
 - shift + tab : 내어쓰기(Outdent)
+
+----
+
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/HTML/ex2.html">빈태그</a>
+
+```html
+<빈 태그 /> <!-- 닫힌 태그가 없음 -->
+
+<태그 속성(Attribute)="값"(value)>내용</태그>
+
+<img />
+<!-- 이미지를 삽입하는 요소(태그)! -->
+<img src="./cat.jpg" alt="고양이" />
+```
+- src : 이미지의 경로
+- alt : 이미지의 이름(대체 텍스트 / Alternate Text)
+```html
+<input />
+<!-- 사용자가 데이터를 입력하는 요소(태그)! -->
+<input type="text" />
+<input type="checkbox" />
+```
+- type : 데이터의 타입
+- text : 사용자에게 일반 텍스트를 입력 받음
+- checkbox : 사용자에게 체크 여부를 입력 받음
