@@ -100,3 +100,120 @@
 <div><span></span></span>
 <!-- 블록(div)요소 안에 인라인(span)요소 사용 가능 -->
 ```
+
+----
+
+## 핵심 요소 정리
+```html
+<div>
+  블록(상자) 요소, 특별한 의미가 없는 구분을 위한 요소 (Division)
+  <h1>블록(상자) 요소, 제목을 의미하는 요소 (Heading)</h1>
+  <p>블록(상자) 요소, 문장을 의미하는 요소 (Paragraph)</p>
+  <img src="img/weather.jpg" alt="12호 태풍" />
+  인라인(글자) 요소, 이미지를 삽입하는 요소 (Image)
+</div>
+```
+- src(source) : 삽입할 이미지의 **경로**
+- alt(alternate) : 삽입할 이미지의 **이름**
+
+```html
+블록(상자) 요소
+<h1>제목1</h1>
+<h2>제목2</h2>
+<h3>제목3</h3>
+<h4>제목4</h4>
+<h5>제목5</h5>
+<h6>제목6</h6>
+```
+- 제목을 의미하는 요소 (Heading)
+- 숫자가 **작을수록 더 중요한 _제목_** 을 정의
+
+```html
+<ul> <!-- 블록(상자) 요소 -->
+  <li>사과</li> <!-- 블록(상자) 요소 -->
+  <li>딸기</li>
+  <li>수박</li>
+  <li>오렌지</li>
+</ul>
+```
+- ul : 순서가 필요없는 목록의 집합을 의미 (Unordered List)
+- li : 목록 내 각 항목 (List Item)
+- ol 도 있다 (ul과 반대)
+
+```html
+<a href="https://www.naver.com">NAVER</a> <!-- 인라인(글자) 요소 -->
+<a href="https://google.com" target="_blank">Google</a>
+```
+- a : 다른/같은 페이지로 이동하는 하이퍼링크를 지정하는 요소 (Anchor)
+- href : 링크 **URL**
+- target : 링크 URL의 _표시(브라우저 탭) 위치_
+
+```html
+<head>
+  <style>
+    span { color: red; }
+  </style>
+</head>
+<body>
+  <span>동해물</span> <!-- 인라인(글자) 요소 -->
+</body>
+```
+- span : 특별한 의미가 없는 구분을 위한 요소
+
+```html
+동해물과 백두산이<br />마르고 닳도록
+<!-- 인라인(글자) 요소 -->
+```
+- br : 줄바꿈 요소 (Break)
+
+```html
+<input type="text" value="CHAN" Placehholder="이름을 입력하세요!" disabled />
+<!-- 인라인(글자) 요소, 블록(상자) 요소 = Inline-block -->
+```
+- input : 사용자가 데이터를 입력하는 요소
+- type : 입력받을 데이터의 **타입**
+- value : 미리 입력된 **값(데이터)**
+- placeholder : 사용자가 입력할 값(데이터)의 **힌트**
+- disabled : 입력 요소 **비활성화**
+
+```html
+<label>
+  <input type="checkbox" /> Apple
+</label>
+<label>
+  <input type="checkbox" checked/> Banana
+</label>
+<!-- 인라인(글자) 요소 -->
+
+<label>
+  <input type="radio" name="fruits" /> Apple
+</label>
+<label>
+  <input type="radio" name="fruits" /> Banana
+</label>
+```
+- label : 라벨 가능 요소(input)의 제목
+- checkbox : 사용자에게 체크 여부를 입력 받음
+- checked : 체크박스 입력 요소 **체크됨**
+- radio : 사용자에게 체크 여부를 **그룹에서 1개만 입력** 받음
+- name="fruits" : 'fruits'란 이름의 **그룹**
+
+```html
+<table>
+  <!-- 테이블 요소 = table -->
+  <tr>
+    <!-- 테이블 요소 = table-row -->
+    <td>A</td><td>B</td>
+    <!-- 테이블 요소 = table-cell -->
+  </tr>
+  <tr>
+
+  </tr>
+</table>
+```
+- table : 표 요소 행(Row)과 열(Column)의 집합
+- tr : 행(Row)을 지정하는 요소 (Table Row)
+- td : 열(Column)을 지정하는 요소 (Table Data)
+
+> **HTML은 구조를 만드는 역할**을 하므로, 각 태그(요소)가 어떤 역할을 하는지, 어떤 속성을 사용하는지 정도만 기억해 두면 충분하다. <br>
+눈에 보이는 **예쁘게 만드는 작업은 CSS**가 그 역할을 담당한다.
