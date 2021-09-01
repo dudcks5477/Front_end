@@ -103,7 +103,7 @@
 
 ----
 
-## 핵심 요소 정리
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/HTML/ex4.html">핵심 요소 정리</a>
 ```html
 <div>
   블록(상자) 요소, 특별한 의미가 없는 구분을 위한 요소 (Division)
