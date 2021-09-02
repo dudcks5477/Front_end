@@ -1,0 +1,14 @@
+.parent {
+  width: 300px;
+  height: 200px;
+  background-color: green;
+}
+.child {
+  width: 100px;
+  height: inherit;
+  background-color: inherit;
+  position: fixed;
+  top: 100px;
+  right: 10px;
+}
+/* inherit : 부모요소가 가지고 있는 특정의 값을 자식이 강제로 가짐 */

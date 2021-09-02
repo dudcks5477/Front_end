@@ -97,7 +97,7 @@ div {
 - 가상 요소
 - 속성
 
-```css
+```html
 <div>
   <ul>
     <li>사과</li>
@@ -108,7 +108,8 @@ div {
   <p>토마토</p>
   <span class="orange">오렌지</span>
 </div>
-
+```
+```css
 /* 기본 선택자 */
 
 /* 전체 선택자(Universal Selector) */
@@ -139,7 +140,7 @@ li {
 ----
 
 ## 선택자 복합
-```css
+```html
 <div>
   <ul>
     <li>사과</li>
@@ -153,7 +154,8 @@ li {
   <span class="orange">오렌지</span>
 </div>
 <span class="orange">오렌지</span>
-
+```
+```css
 /* 일치 선택자 */
 span.orange {
   color: red;
@@ -188,10 +190,11 @@ div .orange {
 ----
 
 ## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/ex3.css">가상 클래스 선택자</a>
-```css
+```html
 <a href="https://www.naver.com">NAVER</a>
 <input type="text" />
-
+```
+```css
 /* 가상 클래스 선택자 (Pseudo-Classes) */
 
 /* HOVER */
@@ -220,8 +223,7 @@ input:foucs {
     - 순서(값)로 **-1** 이 아닌 다른 값을 넣는 것은 논리적 흐름을 방해하기 떄문에 권장하지 않는다.
     - 검색 추천: tabindex mdn
   - 구글 검색: HTML 대화형 콘텐츠 mdn
-
-```css
+```html
 <div class="fruits">
   <span>딸기</span>
   <span>수박</span>
@@ -229,7 +231,8 @@ input:foucs {
   <p>망고</p>
   <h3>사과</h3>
 </div>
-
+```
+```css
 /* 가상 클래스 선택자 (Pseudo-Classes) */
 
 /* FIRST CHILD */
@@ -264,7 +267,7 @@ input:foucs {
 - NTH CHILD : 선택자 ABC가 형제 요소 중 (n)째라면 선택
   - 2n : n은 0부터 시작 (Zero-Based Numbering)
 
-```css
+```html
 <div class="fruits">
   <span>딸기</span>
   <span>수박</span>
@@ -272,7 +275,8 @@ input:foucs {
   <p>망고</p>
   <h3>사과</h3>
 </div>
-
+```
+```css
 /* 부정 선택자 (Negation) */
 
 /* NOT */
@@ -285,13 +289,14 @@ input:foucs {
 ----
 
 ## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/ex4.css">선택자 가상 요소</a>
-```css
+```html
 <div class="box">
 
   Content
 
 </div>
-
+```
+```css
 /* 가상 요소 선택자 (Pseudo-Elements) */
 /* BEFORE, AFTER는 사용하지 않더라도 content를 써야함 */
 
@@ -311,11 +316,12 @@ input:foucs {
 ----
 
 ## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/ex5.css">선택자 속성</a>
-```css
+```html
 <input type="text" value="CHAN" />
 <input type="password" value="0318" />
 <input type="text" value="ABCD" disabled />
-
+```
+```css
 /* 속성 선택자 (Attribute) */
 
 /* ATTR */
@@ -333,3 +339,28 @@ input:foucs {
 ```
 - ATTR : 속성 ABC을 포함한 요소 선택
 - ATTR=VALUE = 속성 ABC을 포함하고 값이 XYZ인 요소 선택
+
+----
+
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/ex6.css">스타일 상속</a>
+### 상속되는 CSS 속성들
+- **모든 글자/문자 관련 속성들**(모든 글자/문자 속성은 아님) 
+- font-style: 글자 기울기
+- font-weight: 글자 두께
+- font-size: 글자 크기
+- ...
+```html
+<div class="ecosystem">생태계
+  <div class="animal">동물
+    <div class="tiger">호랑이</div>
+    <div class="lion">사자</div>
+    <div class="elephant">코끼리</div>
+  </div>
+  <div class="plant">식물</div>
+</div>
+```
+```css
+.animal {
+  color: red;
+}
+```
