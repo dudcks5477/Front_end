@@ -281,3 +281,29 @@ input:foucs {
 }
 ```
 - NOT : 선택자 XYZ가 아닌 ABC 요소 선택
+
+----
+
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/ex4.css">선택자 가상 요소</a>
+```css
+<div class="box">
+
+  Content
+
+</div>
+
+/* 가상 요소 선택자 (Pseudo-Elements) */
+/* BEFORE, AFTER는 사용하지 않더라도 content를 써야함 */
+
+/* BEFORE (인라인[글자] 요소)*/
+.box::before {
+  content: "앞";
+}
+
+/* AFTER (인라인[글자] 요소) */
+.box::after {
+  content: "뒤";
+}
+```
+- BEFORE : 선택자 ABC 요소의 **내부 앞** 에 내용(Content)을 삽입
+- AFTER : 선택자 ABC 요소의 **내부 뒤** 에 내용(Content)을 삽입
