@@ -184,3 +184,100 @@ div .orange {
 - 하위(후손) 선택자 (Descendant Combinator) : 선택자 ABC의 **하위** 요소 XYZ 선택, '띄어쓰기'가 선택자의 기호
 - 인접 형제 선택자 (Adjacent Sibling Combinator) : 선택자 ABC의 다음 형제 요소 XYZ **하나**를 선택
 - 일반 형제 선택자 (General Sibling Combinator) : 선택자 ABC의 다음 형제 요소 XYZ **모두**를 선택
+
+----
+
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/ex3.css">가상 클래스 선택자</a>
+```css
+<a href="https://www.naver.com">NAVER</a>
+<input type="text" />
+
+/* 가상 클래스 선택자 (Pseudo-Classes) */
+
+/* HOVER */
+a:hover {
+  color: red;
+}
+
+/* ACTIVE */
+a:active {
+  color: red;
+}
+
+/* FOCUS */
+input:foucs {
+  background-color: orange;
+}
+```
+- HOVER : 선택자 ABC 요소에 **마우스 커서가 올라가 있는 동안** 선택
+- ACTIVE : 선택자 ABC 요소에 **마우스를 클릭하고 있는 동안** 선택
+- FOUCS : 선택자 ABC 요소가 **포커스되면** 선택
+  - Foucs가 될 수 있는 요소는 _HTML 대화형 콘텐츠_ 가 해당한다.
+  - INPUT, A, BUTTON, LABEL, SELECT 등 여러 요소가 있다.
+  - HTML 대화형 콘텐츠 요소가 아니더라도, _tabindex_ 속성을 사용한 요소도 Focus가 될 수 있다.
+    - **tabindex** 속성을 통해 Foucs가 될 수 있는 요소를 만들 수 있다.
+    - 이름에서도 알 수 있듯, Tab 키를 사용해 Focus 할 수 있는 순서를 지정하는 속성이다.
+    - 순서(값)로 **-1** 이 아닌 다른 값을 넣는 것은 논리적 흐름을 방해하기 떄문에 권장하지 않는다.
+    - 검색 추천: tabindex mdn
+  - 구글 검색: HTML 대화형 콘텐츠 mdn
+
+```css
+<div class="fruits">
+  <span>딸기</span>
+  <span>수박</span>
+  <div>오렌지</div>
+  <p>망고</p>
+  <h3>사과</h3>
+</div>
+
+/* 가상 클래스 선택자 (Pseudo-Classes) */
+
+/* FIRST CHILD */
+.fruits span:first-child {
+  color: red;
+}
+.fruits div:first-child {
+  color: green;
+} /* X */
+
+/* LAST CHILD */
+.fruits h3:last-child {
+  color: red;
+}
+
+/* NTH CHILD */
+.fruits *:nth-child(2) {
+  color: red;
+}
+.fruits *:nth-child(2n) {
+  color: green;
+}
+.fruits *:nth-child(2n+1) {
+  color: blue;
+}
+.fruits *:nth-child(n+2) {
+  color: rebeccapurple;
+}
+```
+- FRIST CHILD : 선택자 ABC가 형제 요소 중 첫쨰라면 선택
+- LAST CHILD : 선택자 ABC가 형제 요소 중 막내라면 선택
+- NTH CHILD : 선택자 ABC가 형제 요소 중 (n)째라면 선택
+  - 2n : n은 0부터 시작 (Zero-Based Numbering)
+
+```css
+<div class="fruits">
+  <span>딸기</span>
+  <span>수박</span>
+  <div>오렌지</div>
+  <p>망고</p>
+  <h3>사과</h3>
+</div>
+
+/* 부정 선택자 (Negation) */
+
+/* NOT */
+.fruits *:not(span) {
+  color: red;
+}
+```
+- NOT : 선택자 XYZ가 아닌 ABC 요소 선택
