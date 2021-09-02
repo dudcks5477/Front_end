@@ -87,3 +87,51 @@ div {
 }
 ```
 - @import 방식 : CSS의 **@import 규칙**으로 CSS 문서 안에서 또 다른 CSS 문서를 가져와 연결하는 방식
+
+----
+
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/ex3.html">선택자 기본</a>
+- 기본
+- 복합
+- 가상 클래스
+- 가상 요소
+- 속성
+
+```css
+<div>
+  <ul>
+    <li>사과</li>
+    <li>딸기</li>
+    <li id="oranage" class="orange">오렌지</li>
+  </ul>
+  <div>당근</div>
+  <p>토마토</p>
+  <span class="orange">오렌지</span>
+</div>
+
+/* 기본 선택자 */
+
+/* 전체 선택자(Universal Selector) */
+/* 모든 요소를 선택 */
+* {
+  color: red;
+}
+
+/* 태그 선택자 */
+li {
+  color: red;
+}
+
+/* 클래스 선택자 */
+.orange {
+  color: red;
+}
+
+/* 아이디 선택자 */
+#orange {
+  color: red;
+}
+```
+- 태그 선택자(Type Selector) : **태그 이름**이 ABC인 요소 선택
+- 클래스 선택자(Class Selector) : HTML **class 속성의 값**이 ABC인 요소 선택
+- 아이디 선택자(ID Selector) : HTML **id 속성의 값**이 ABC인 요소 선택
