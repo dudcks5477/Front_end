@@ -31,3 +31,59 @@ div {
 /* 설명 작성 */
 ```
 - /* */ : 주석, 브라우저는 이 범위를 해석하지 않음
+
+----
+
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/ex2.html">선언 방식</a>
+- 내장 방식
+- <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/ex2.css">링크 방식</a>
+- 인라인 방식
+- <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/ex2_box.html">@import 방식</a>
+
+```css
+/* 내장 방식 */
+<style>
+  div {
+    color: red;
+    margin: 20px
+  }
+</style>
+/* <style></style>의 내용(Contents)으로 스타일을 작성하는 방식 */
+```
+
+```css
+/* 인라인 방식 */
+<div style="color: red; margin: 20px;"></div>
+```
+-  인라인 방식 : 요소의 **style 속성** 에 직접 스타일을 작성하는 방식(선택자 없음)
+
+```css
+/* 링크 방식 */
+<link rel="stylesheet" href="./ex2.css">
+
+/* ex2.css */
+div {
+  color: red;
+  margin: 20px;
+}
+```
+- 링크 방식 : link 로 외부 CSS 문서를 가져와서 연결하는 방식
+
+```css
+/* @import 방식 */
+<link rel="stylesheet" href="./ex2.css">
+
+/* ex2.css */
+@import url("./box.css");
+div {
+  color: red;
+  margin: 20px;
+}
+
+/* box.css */
+.box {
+  background-color: red;
+  padding: 20px;
+}
+```
+- @import 방식 : CSS의 **@import 규칙**으로 CSS 문서 안에서 또 다른 CSS 문서를 가져와 연결하는 방식
