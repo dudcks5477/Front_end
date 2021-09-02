@@ -36,9 +36,9 @@ div {
 
 ## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/ex2.html">선언 방식</a>
 - 내장 방식
-- <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/ex2.css">링크 방식</a>
+- <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/css/ex2.css">링크 방식</a>
 - 인라인 방식
-- <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/ex2_box.html">@import 방식</a>
+- <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/css/ex2_box.html">@import 방식</a>
 
 ```css
 /* 내장 방식 */
@@ -189,7 +189,7 @@ div .orange {
 
 ----
 
-## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/ex3.css">가상 클래스 선택자</a>
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/css/ex3.css">가상 클래스 선택자</a>
 ```html
 <a href="https://www.naver.com">NAVER</a>
 <input type="text" />
@@ -288,7 +288,7 @@ input:foucs {
 
 ----
 
-## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/ex4.css">선택자 가상 요소</a>
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/css/ex4.css">선택자 가상 요소</a>
 ```html
 <div class="box">
 
@@ -315,7 +315,7 @@ input:foucs {
 
 ----
 
-## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/ex5.css">선택자 속성</a>
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/css/ex5.css">선택자 속성</a>
 ```html
 <input type="text" value="CHAN" />
 <input type="password" value="0318" />
@@ -342,7 +342,7 @@ input:foucs {
 
 ----
 
-## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/ex6.css">스타일 상속</a>
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/css/ex6.css">스타일 상속</a>
 ### 상속되는 CSS 속성들
 - **모든 글자/문자 관련 속성들**(모든 글자/문자 속성은 아님) 
 - font-style: 글자 기울기
