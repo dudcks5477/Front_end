@@ -307,3 +307,29 @@ input:foucs {
 ```
 - BEFORE : 선택자 ABC 요소의 **내부 앞** 에 내용(Content)을 삽입
 - AFTER : 선택자 ABC 요소의 **내부 뒤** 에 내용(Content)을 삽입
+
+----
+
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/ex5.css">선택자 속성</a>
+```css
+<input type="text" value="CHAN" />
+<input type="password" value="0318" />
+<input type="text" value="ABCD" disabled />
+
+/* 속성 선택자 (Attribute) */
+
+/* ATTR */
+[disabled] {
+  color: red;
+}
+[type] {
+  color: red;
+}
+
+/* ATTR=VALUE */
+[type="password"] {
+  color: red;
+}
+```
+- ATTR : 속성 ABC을 포함한 요소 선택
+- ATTR=VALUE = 속성 ABC을 포함하고 값이 XYZ인 요소 선택

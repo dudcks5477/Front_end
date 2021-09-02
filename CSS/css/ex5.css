@@ -1,0 +1,13 @@
+/* [type] {
+  background-color: red;
+} */
+
+[type="text"] {
+  background-color: red;
+}
+[type="password"] {
+  background-color: green;
+}
+[data-fruit-name] {
+  color: blue;
+}
