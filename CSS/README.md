@@ -90,7 +90,7 @@ div {
 
 ----
 
-## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/ex3.html">선택자 기본</a>
+## 선택자 기본
 - 기본
 - 복합
 - 가상 클래스
@@ -135,3 +135,52 @@ li {
 - 태그 선택자(Type Selector) : **태그 이름**이 ABC인 요소 선택
 - 클래스 선택자(Class Selector) : HTML **class 속성의 값**이 ABC인 요소 선택
 - 아이디 선택자(ID Selector) : HTML **id 속성의 값**이 ABC인 요소 선택
+
+----
+
+## 선택자 복합
+```css
+<div>
+  <ul>
+    <li>사과</li>
+    <li>딸기</li>
+    <li class="orange">오렌지</li>
+    <li>망고</li>
+    <li>사과</li>
+  </ul>
+  <div>당근</div>
+  <p>토마토</p>
+  <span class="orange">오렌지</span>
+</div>
+<span class="orange">오렌지</span>
+
+/* 일치 선택자 */
+span.orange {
+  color: red;
+}
+
+/* 자식 선택자 */
+ul > .orange {
+  color: red;
+}
+
+/* 하위(후손) 선택자 */
+div .orange {
+  color: red;
+}
+
+/* 인접 형제 선택자 */
+.orange + li {
+  color: red;
+}
+
+/* 일반 형제 선택자 */
+.orange ~ li {
+  color: red;
+}
+```
+- 일치 선택자 (Basic Combinator) : 선택자 ABC와 XYZ를 **동시에 만족**하는 요소 선택
+- 자식 선택자 (Child Combinator) : 선택자 ABC의 **자식** 요소 XYZ 선택
+- 하위(후손) 선택자 (Descendant Combinator) : 선택자 ABC의 **하위** 요소 XYZ 선택, '띄어쓰기'가 선택자의 기호
+- 인접 형제 선택자 (Adjacent Sibling Combinator) : 선택자 ABC의 다음 형제 요소 XYZ **하나**를 선택
+- 일반 형제 선택자 (General Sibling Combinator) : 선택자 ABC의 다음 형제 요소 XYZ **모두**를 선택
