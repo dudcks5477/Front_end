@@ -364,3 +364,46 @@ input:foucs {
   color: red;
 }
 ```
+
+----
+
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/css/ex7.css">선택자 우선순위</a>
+- 우선순위란, 같은 요소가 여러 선언의 대상이 된 경우, 어떤 선언의 CSS 속성을 우선 적용할지 결정하는 방법
+  1. 점수가 높은 선언이 우선함
+  1. 점수가 같으면, 가장 마지막에 해석된 선언이 우선함
+```html
+<div
+  id="color_yellow"
+  class="color_green"
+  style="color: orange;"> <!-- 인라인 선언 -->
+  Hello world!
+</div>
+```
+```css
+div { color: red !important; }
+#color_yellow { color: yellow; }
+.color_green { color: green; }
+div { color: blue; } /* 태그 선택자 */
+* {color: darkblue; } 
+body { color: violet; } /* 상속 */
+``` 
+- 용어가 중요하진 않지만, CSS 우선순위의 점수를 계산하는 것을 **명시도** 라고 부른다.
+- **선언 순서** (코드가 해석된 순서)에 따라 우선한다고 표현한다.
+  - 인라인 선언 : 1000점
+  - !important : 999999999점(무한대)
+    - _!important_ 키워드를 사용하는 것을 _중요도_ 라고 부른다.
+  - ID 선택자 : 100점
+  - Class 선택자 : 10점
+  - 태그 선택자 : 1점
+  - 전체 선택자 : 0점
+  - 상속 : X
+  - 인라인 방식과, !important 방식은 점수가 너무 높아서 되도록 사용하지 않기
+```css
+.list li.item { color: red; } /* 21점 */
+.list li:hover { color: red; } /* 21점 */
+.box::before { content: "Good"; color: red; } /* 11점 */
+#submit span { color: red; } /* 101점 */
+header .menu li:nth-child(2) { color: red; } /* 22점 */
+h1 { color: red; } /* 1점 */
+:not(.box) { color: red; } /* 10점 */
+```
