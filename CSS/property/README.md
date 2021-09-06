@@ -59,7 +59,8 @@
 - vw : 뷰포트 가로 너비의 백분율
 - vh : 뷰포트 세로 너비의 백분율
 
-  ----
+----
+
 ## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex3.css">외부 여백(margin)</a>
 - margin : 요소의 **외부** 여백(공간)을 지정하는 **단축 속성**
   - _음수_ 를 사용할 수 있다.
@@ -86,3 +87,30 @@ margin: 10px 20px 30px 40px;
   - margin-bottom
   - margin-left
   - margin-right
+
+----
+
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex4.css">내부 여백(padding)</a>
+- padding : 요소의 **내부 여백** (공간)을 지정하는 **단축 속성**
+  - 요소의 _크기가 커짐_
+  - <span style="color: red;">0</span> : 내부 여백 없음
+  - 단위 : px, em, vw 등 단위로 지정
+  - % : 부모 요소의 _가로 너비_ 에 대한 비율로 지정
+```css
+padding: 10px;
+/* top, right, bottom, left */
+
+padding: 10px 20px;
+/* top, bottom    right, left */
+
+padding: 10px 20px 30px;
+/* top    left, right, bottom */
+
+padding: 10px 20px 30px 40px;
+/* top    right   bottom    left */
+```
+- padding-방향 : 요소의 내부 여백(공간)을 지정하는 기타 **개별 속성** 들
+  - padding-top
+  - padding-bottom
+  - padding-left
+  - padding-right
