@@ -1,0 +1,15 @@
+.container .item {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+.container .item:first-child {
+  /* border: 10px solid green; */
+  /* border: 4px dotted green; */
+  /* border: 4px dashed green; */
+  /* border: 4px double green; */
+  /* border: 4px groove green; */
+  /* border: 4px ridge green; */
+  /* border: 4px inset green; */
+  border: 4px outset green;
+}

@@ -114,3 +114,71 @@ padding: 10px 20px 30px 40px;
   - padding-bottom
   - padding-left
   - padding-right
+
+----
+
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex4.css">테두리 선(border)과 색상 표현</a>
+```css
+border: 선-두께 선-종류 선-색상;
+```
+- border : 요소의 **테두리 선** 을 지정하는 **단축 속성**
+  - 요소의 _크기가 커진다_
+- 선-두께 : border-width
+- 선-종류 : border-style
+- 선-색상 : border-color
+```css
+border: medium none black;
+/* border-width   border-style    border-color */
+
+border: 4px solid black;
+border: 10px solid black;
+
+border-width: top, right, bottom, left;
+border-width: top, right    bottom, left;
+border-width: top   right, bottom    left;
+border-width: top   right   bottom    left;
+
+border-style: top, right, bottom, left;
+border-style: top, right    bottom, left;
+border-style: top   right, bottom    left;
+border-style: top   right   bottom    left;
+
+border-color: top, right, bottom, left;
+border-color: top, right    bottom, left;
+border-color: top   right, bottom    left;
+border-color: top   right   bottom    left;
+```
+- none : 선의 종류가 없어서(none) 출력되지 않는다.
+- black : **기본값** (요소에 이미 들어있는 속성의 값)
+- border-width : 요소 테두리 선의 **두꼐**
+  - medium : 중간 두께
+  - this : 얇은 두께
+  - thick : 두꺼운 두께
+  - 단위 : px, em, % 등 단위로 지정
+- border-style: 요소 테두리 선의 **종류**
+  - <span style="color: red;">none</span> : 선 없음
+  - solid : 실선(일반 선)
+  - dotted : 점선
+  - dashed : 파선
+  - double : 두 줄 선
+  - groove : 홈이 파여있는 모양
+  - ridge : 솟은 모양 (groove의 반대)
+  - inset : 요소 전체가 들어간 모양
+  - outset : 요소 전체가 나온 모양
+- border-color : 요소 테두리 선의 **색상을 지정하는 단축 속성**
+  - <span style="color: red;">black</span> : 검정색
+  - 색상 : 선의 색상
+  - transparent : 투명
+  - 색상 표현 : 색을 사용하는 모든 속성에 적용 가능한 색상 표현
+  
+  |색상 이름|Hex 색상코드|RGB|RGBA|HSL|HSLA|
+  |---|---|---|---|---|---|
+  |브라우저에서 제공하는 색상 이름|16진수 색상(Hexadeciaml Colors)|빛의 삼원색|빛의 삼원색 + 투명도|색상, 채도, 명도|색상, 채도, 명도 + 투명도|
+  |red, tomato, royalblue|#000, #FFFFFF|rgb(255, 255, 255)|rgba(0, 0, 0, 0.5)|hsl(120, 100%, 50%)|hsla(120, 100%, 50%, 0.3)|
+
+- border-방향(top, rigth, bottom, left), border-방향-속성 : 요소의 테두리 선을 지정하는 **기타 속성들**
+  - border-top: 두께 종류 색상;
+  - border-top-width: 두께;
+  - border-top-style: 종류;
+  - border-top-color: 색상;
+  - ...
