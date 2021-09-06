@@ -217,3 +217,17 @@ overflow: scroll; /* 스크롤바 (x축, y축) */
 overflow: auto;
 ```
 - overflow-x, overflow-y : 요소의 크기 이상으로 내용이 넘쳤을 때, 보여짐을 제어하는 **개별 속성들**
+
+----
+
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex9.css">출력 특성(display)</a>
+- display : 요소의 화면 **출력(보여짐) 특성**
+  - 각 요소에 이미 지정되어 있는 값
+    - <span style="color: red;">block</span> : 상자(레이아웃) 요소
+    - <span style="color: red;">inline</span> : 글자 요소
+    - <span style="color: red;">inline-block</span> : 글자 + 상자 요소
+  - 따로 지정해서 사용하는 값
+    - flex : 플렉스 박스 (1차원 레이아웃)
+    - grid : 그리드 (2차원 레이아웃)
+    - none : 보여짐 특성 없음, 화면에서 사라짐
+    - <span style="color: red;">기타</span> : table, table-row, table-cell 등
