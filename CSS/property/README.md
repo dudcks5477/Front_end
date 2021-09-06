@@ -117,7 +117,7 @@ padding: 10px 20px 30px 40px;
 
 ----
 
-## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex4.css">테두리 선(border)과 색상 표현</a>
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex5.css">테두리 선(border)과 색상 표현</a>
 ```css
 border: 선-두께 선-종류 선-색상;
 ```
@@ -185,7 +185,7 @@ border-color: top   right   bottom    left;
 
 ----
 
-## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex4.css">모서리 둥글게(border-radius)</a>
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex6.css">모서리 둥글게(border-radius)</a>
 - border-radius : 요소의 모서리를 **둥글게 깎음**
   - <span style="color: red;">0</span> : 둥글게 없음
   - 단위 : px, em, vw 등 단위로 지정
@@ -193,3 +193,10 @@ border-color: top   right   bottom    left;
 /* 각 위치에 깍을 수 있는 크기를 지정해 줄 수 있음 */
 border-radius: 0 10px 0 0;
 ```
+
+----
+
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex7.css">크기 계산(box-sizing)</a>
+- box-sizing : 요소의 **크기 계산 기준** 을 지정
+  - <span style="color: red;">content-box</span> : 요소의 내용(content)으로 크기 계산
+  - border-box : 요소의 내용 + padding + border로 크기 계산
