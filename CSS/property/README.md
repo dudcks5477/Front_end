@@ -200,3 +200,20 @@ border-radius: 0 10px 0 0;
 - box-sizing : 요소의 **크기 계산 기준** 을 지정
   - <span style="color: red;">content-box</span> : 요소의 내용(content)으로 크기 계산
   - border-box : 요소의 내용 + padding + border로 크기 계산
+
+----
+
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex8.css">넘침 제어(overflow)</a>
+- overflow : 요소의 크기 이상으로 **내용이 넘쳤을 때, 보여짐을 제어** 하는 **단축 속성**
+  - <span style="color: red;">visible</span> : 넘친 내용을 그대로 보여줌
+  - hidden : 넘친 내용을 잘라냄
+  - scroll : 넘친 내용을 잘라냄, 스크롤바 생성
+  - auto : 넘친 내용이 있은 경우에만 잘라내고 스크롤바 생성
+```css
+/* 내용이 넘쳤을 때 */
+overflow: visible; /* 내용 넘침 */
+overflow: hidden; /* 잘라냄 */
+overflow: scroll; /* 스크롤바 (x축, y축) */
+overflow: auto;
+```
+- overflow-x, overflow-y : 요소의 크기 이상으로 내용이 넘쳤을 때, 보여짐을 제어하는 **개별 속성들**
