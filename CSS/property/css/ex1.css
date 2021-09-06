@@ -1,0 +1,24 @@
+/* div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+} */
+
+span {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+
+.parent {
+  width: 300px;
+  height: 200px;
+  background-color: blue;
+}
+.child {
+  /* width: 200px; */
+  /* max-width: 300px; */
+  min-width: 400px;
+  height: 100px;
+  background-color:antiquewhite; 
+}
