@@ -47,3 +47,14 @@
   - <span style="color: red">0</span> : 최소 너비 제한 없음
   - auto : 브라우저가 너비를 계산
   - 단위 : px, em, vw 등 단위로 지정
+
+  ----
+
+  ## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex2.css">CSS 단위</a>
+  ### 단위
+  - px : 픽셀
+  - % : 상대적 백분율
+  - em : 요소의 글꼴 크기
+  - rem : 루트 요소(html)의 글꼴 크기
+  - vw : 뷰포트 가로 너비의 백분율
+  - vh : 뷰포트 세로 너비의 백분율

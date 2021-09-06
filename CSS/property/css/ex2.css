@@ -1,0 +1,18 @@
+html {
+  /* 기본 폰트 사이즈 */
+  font-size: 16px;
+}
+.parent {
+  width: 300px;
+  height: 200px;
+  background-color: red;
+  font-size: 10px;
+}
+.child {
+  /* width: 20em; */
+  /* width: 20rem; */
+  width: 50vw;
+  /* height: 50%; */
+  height: 100vh;
+  background-color: green;
+}
