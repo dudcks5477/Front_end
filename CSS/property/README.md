@@ -231,3 +231,10 @@ overflow: auto;
     - grid : 그리드 (2차원 레이아웃)
     - none : 보여짐 특성 없음, 화면에서 사라짐
     - <span style="color: red;">기타</span> : table, table-row, table-cell 등
+
+----
+
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex9.css">투명도</a>
+- opacity : 요소 **투명도**
+  - <span style="color: red;">1</span> : 불투명
+  - 0~1 : 0부터 1 사이의 소수점 숫자
