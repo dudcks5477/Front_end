@@ -50,11 +50,39 @@
 
   ----
 
-  ## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex2.css">CSS 단위</a>
-  ### 단위
-  - px : 픽셀
-  - % : 상대적 백분율
-  - em : 요소의 글꼴 크기
-  - rem : 루트 요소(html)의 글꼴 크기
-  - vw : 뷰포트 가로 너비의 백분율
-  - vh : 뷰포트 세로 너비의 백분율
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex2.css">CSS 단위</a>
+### 단위
+- px : 픽셀
+- % : 상대적 백분율
+- em : 요소의 글꼴 크기
+- rem : 루트 요소(html)의 글꼴 크기
+- vw : 뷰포트 가로 너비의 백분율
+- vh : 뷰포트 세로 너비의 백분율
+
+  ----
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex3.css">외부 여백(margin)</a>
+- margin : 요소의 **외부** 여백(공간)을 지정하는 **단축 속성**
+  - _음수_ 를 사용할 수 있다.
+  - <span style="color: red;">0</span> : 외부 여백 없음
+  - auto : 브라우저가 여백을 계산
+    - 가로(세로) 너비가 있는 요소의 _가운데 정렬_ 에 활용한다.
+  - 단위 : px, em, vw 등 단위로 지정
+  - % : 부모 요소의 _가로 너비_ 에 대한 비율로 지정
+```css
+margin: 10px;
+/* top, right, bottom, left */
+
+margin: 10px 20px;
+/* top, bottom   left, rigth */
+
+margin: 10px 20px 30px;
+/* top    left, right   bottom */
+
+margin: 10px 20px 30px 40px;
+/* top    rigth   bottom    left */
+```
+- margin-방향 : 요소의 외부 여백(공간)을 지정하는 기타 **개별 속성** 들
+  - margin-top
+  - margin-bottom
+  - margin-left
+  - margin-right
