@@ -182,3 +182,14 @@ border-color: top   right   bottom    left;
   - border-top-style: 종류;
   - border-top-color: 색상;
   - ...
+
+----
+
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex4.css">모서리 둥글게(border-radius)</a>
+- border-radius : 요소의 모서리를 **둥글게 깎음**
+  - <span style="color: red;">0</span> : 둥글게 없음
+  - 단위 : px, em, vw 등 단위로 지정
+```css
+/* 각 위치에 깍을 수 있는 크기를 지정해 줄 수 있음 */
+border-radius: 0 10px 0 0;
+```
