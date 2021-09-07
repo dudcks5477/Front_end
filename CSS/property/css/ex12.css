@@ -1,0 +1,17 @@
+a {
+  display: block;
+  width: 200px;
+  height: 100px;
+  background-color: red;
+  font-size: 22px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  line-height: 100px;
+}
+
+p {
+  font-size: 24px;
+  /* text-indent: 50px; 들여쓰기 */
+  text-indent: -50px; /* 내어쓰기 */
+}

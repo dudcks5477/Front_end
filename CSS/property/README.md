@@ -279,3 +279,25 @@ overflow: auto;
     - monospace : 고정너비(가로폭이 동등) 글꼴 계열
     - cursive : 필기체 계열
     - fantasy : 장식 글꼴 계열
+
+----
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex12.css">문자</a>
+- color : 글자의 **색상**
+  - <span style="color: red;">rgb(0, 0, 0)</span> : 검정색
+  - 색상 : 기타 지정 가능한 색상
+- text-align : 문자의 **정렬 방식**
+  - <span style="color: red;">left</span> : 왼쪽 정렬
+  - right : 오른쪽 정렬
+  - center : 가운데 정렬
+  - justify : 양쪽 정렬
+- text-decoration : 문자의 **장식(선)**
+  - <span style="color: red;">none</span> : 장식 없음
+  - underline : 밑줄
+  - overline : 윗줄
+  - line-through : 중앙 선
+- text-indent : 문자 **첫 줄** 의 **들여쓰기**
+  - _음수_ 를 사용할 수 있다.
+  - 반대는 내어쓰기(outdent)이다.
+  - <span style="color: red;">0</span> : 들여쓰기 없음
+  - 단위 : px, em, rem 등 단위로 지정
+  - % : 요소의 가로 너비에 대한 비율
