@@ -301,3 +301,71 @@ overflow: auto;
   - <span style="color: red;">0</span> : 들여쓰기 없음
   - 단위 : px, em, rem 등 단위로 지정
   - % : 요소의 가로 너비에 대한 비율
+
+----
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex13.css">배경</a>
+- background-color : 요소의 **배경 색상**
+  - <span style="color: red;">transparent</span> : 투명함
+  - 색상 : 지정 가능한 색상
+- background-image : 요소의 **배경 이미지 삽입**
+  - <span style="color: red;">none</span> : 이미지 없음
+  - url("경로") : 이미지 경로
+```css
+background-color: red;
+background-image: url("경로");
+/* 배경 색상은 이미지 뒤에 나온다. */
+```
+- background-repeat : 요소의 **배경 이미지 반복**
+  - <span style="color: red;">repeat</span> : 이미지를 수직, 수평 반복
+  - repeat-x : 이미지를 수평 반복
+  - repeat-y : 이미지를 수직 반복
+  - no-repeat : 반복 없음
+```css
+background-color: red;
+background-image: url("경로");
+/* background-repeat: repeat-x; */
+/* background-repeat: repeat-y; */
+background-repeat: no-repeat;
+```
+- background-position : 요소의 **배경 이미지 위치**
+  - <span style="color: red;">0% 0%</span> : 0% ~ 100% 사이의 값
+  - 방향 : top, bottom, left, right, center 방향
+    - 방향1 방향2
+  - 단위 : px, em, rem 등 단위로 지정
+    - x축 y축
+```css
+background-color: red;
+background-image: url("경로");
+background-repeat: no-repeat;
+/* background-position: top right; */
+/* background-position: center; */
+background-position: 100px 30px;
+```
+- background-size : 요소의 **배경 이미지 크기**
+  - <span style="color: red;">auto</span> : 이미지의 _실제_ 크기
+  - 단위 : px, em, rem 등 단위로 지정
+  - cover : 비율을 유지, 요소의 더 _넓은_ 너비에 맞춤
+  - contain : 비율을 유지, 요소의 더 _짧은_ 너비에 맞춤
+```css
+background-color: red;
+background-image: url("경로");
+background-repeat: no-repeat;
+background-size: cover;
+/* ---- */
+background-color: red;
+background-image: url("경로");
+background-repeat: no-repeat;
+background-size: contain;
+```
+- background-attachment : 요소의 **배경 이미지 스크롤 특성**
+  - <span style="color: red;">scroll</span> : 이미지가 요소를 따라서 같이 스크롤
+  - fixed : 이미지가 뷰포트에 고정, 스크롤 X
+  - local : 요소 내 스크롤 시 이미지가 같이 스크롤
+```css
+background-color: red;
+background-image: url("경로");
+background-repeat: no-repeat;
+background-size: cover;
+/* background-attachment: scroll; */
+background-attachment: fixed;
+```
