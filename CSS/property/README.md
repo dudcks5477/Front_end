@@ -234,7 +234,48 @@ overflow: auto;
 
 ----
 
-## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex9.css">투명도</a>
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex10.css">투명도</a>
 - opacity : 요소 **투명도**
   - <span style="color: red;">1</span> : 불투명
   - 0~1 : 0부터 1 사이의 소수점 숫자
+
+----
+
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex11.css">글꼴</a>
+- font-style : 글자의 **기울기**
+  - <span style="color:red;">normal</span> : 기울기 없음
+  - italic : 이텔릭체
+  - oblique : 기울어진 글자
+- font-weight : 글자의 **두께(가중치)**
+  - <span style="color:red;">normal, 400</span> : 기본 두께
+  - bold, 700 : 두껍게
+  - bolder : 상위(부모) 요소보다 더 두껍게
+  - lighter : 상위(부모) 요소보다 더 얇게
+  - 100 ~ 900 : 100 단위의 숫자 9개, normal과 bold 이외 두께
+- font-size : 글자의 **크기**
+  - <span style="color:red;">16px</span> : 기본 크기
+  - 단위 : px, em, rem 등 단위로 지정
+  - % : 부모 요소의 폰트 크기에 대한 비율
+  - smaller : 상위(부모) 요소보다 작은 크기
+  - larger : 상위(부모) 요소보다 큰 크기
+  - xx-small ~ xx-large : 가장 작은 크기 ~ 가장 큰 크기까지, 7단계의 크기를 지정
+- line-height : 한 **줄의 높이**, 행간의 유사
+  - <span style="color:red;">normal</span> : 브라우저의 기본 정의를 사용
+  - 숫자 : 요소의 글꼴 크기의 배수로 지정
+  - 단위 : px, em, rem 등의 단위로 지정
+  - % : 요소의 글꼴 크기의 비율로 지정
+  ```css
+  font-size: 16px;
+  line-height: 32px;
+  /* line-height: 2; */
+  /* line-height: 200%; */
+  ```
+- font-family: 글꼴1, "글꼴2", ...<span style="color:red;">글꼴계열</span>;
+  - **글꼴(서체)** 지정
+  - "글꼴2" : 띄어쓰기 등 특수문자가 포함된 글꼴 이름은 큰 따옴표로 묶어야 한다.
+  - ...<span style="color:red;">글꼴계열</span>; : 필수로 작성
+    - serif : 바탕체 계열
+    - sans-serif : 고딕체 계열
+    - monospace : 고정너비(가로폭이 동등) 글꼴 계열
+    - cursive : 필기체 계열
+    - fantasy : 장식 글꼴 계열
