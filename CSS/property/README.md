@@ -369,3 +369,18 @@ background-size: cover;
 /* background-attachment: scroll; */
 background-attachment: fixed;
 ```
+
+----
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex14.css">배치</a>
+- position : 요소의 위치 지정 **기준**
+  - position과 같이 사용하는 CSS 속성들, 모두 _음수_ 를 사용할 수 있다.
+    - top, bottom, left, right, z-index
+  - <span style="color: red;">static</span> : 기준 없음
+  - relative : 요소 ~~자신~~ 을 기준
+  - absolute : 위치 상 ~~부모~~ 요소를 기준
+    - 위치 상 부모 요소를 꼭 확인해야 한다.
+  - fixed : ~~뷰포트~~ (브라우저)를 기준 
+  - sticky : ~~스크롤 영역~~ 기준
+- top, bottom, left, right : 요소의 각 방향별 거리 지정
+  - <span style="color: red;">auto</span> : 브라우저가 계산
+  - 단위 : px, em, rem 등 단위로 지정
