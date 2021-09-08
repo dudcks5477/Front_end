@@ -439,3 +439,26 @@ background-attachment: fixed;
 - flex-basis : Flex Item의 공간 배분 전 **기본** 너비
   - <span style="color: red;">auto</span> : 요소의 Content 너비
   - 단위 : px, em, rem 등 단위로 지정
+
+----
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex16.css">전환</a>
+- transition: 속성명(transition-property) <span style="color: red;">지속시간</span>(transition-duration) 타이밍함수(transition-timing-function) 대기시간(transition-delay);
+  - 요소의 **전환(시작과 끝)** 효과를 지정하는 **단축 속성**
+  - 지속시간 : 단축형으로 작성할 때, 필수 포함 속성
+  - transition-property : 전환 효과를 사용할 **속성 이름** 을 지정
+    - <span style="color: red; background-color: green">all</span> : 모든 속성에 적용
+    - 속성이름 : 전환 효과를 사용할 속성 이름 명시
+  - <span style="background-color: green">transition-duration</span> : 전환 효과의 **지속시간** 을 지정
+    - <span style="color: red;">0s</span> : 전환 효과 없음
+    - 시간 : 지속시간(s)을 지정
+  - transition-timing-function : 전환 효과의 **타이밍(Easing) 함수** 를 지정
+    - <span style="color: red;">ease</span> : 느리게 - 빠르게 - 느리게 = cubic-bezier(0.25, 0.1, 0.25, 1)
+    - linear : 일정하게 = cubic-bezier(0, 0, 1, 1)
+    - ease-in : 느리게 - 빠르게 = cubic-bezier(0.42, 0, 1, 1)
+    - ease-out : 빠르게 - 느리게 = cubic-bezier(0, 0, 0.58, 1)
+    - ease-in-out : 느리게 - 빠르게 - 느리게 = cubic-bezier(0.42, 0, 0.58, 1)
+    - cubic-bezier(n, n, n, n) : 자신만의 값을 정의(0~1)
+    - steps(n) : n번 분할된 애니메이션
+  - transition-delay : 전환 효과가 몇 초 뒤에 시작할지 대기시간을 지정
+    - <span style="color: red;">0s</span> : 대기시간 없음
+    - 시간 : 대기시간(s)을 지정

@@ -1,0 +1,10 @@
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transition: 1s .5s;
+}
+div:active {
+  width: 300px;
+  background-color: green;
+}
