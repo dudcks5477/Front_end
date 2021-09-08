@@ -393,3 +393,49 @@ background-attachment: fixed;
   - 숫자 : 숫자가 높을 수록 위에 쌓임
 - 요소의 display가 변경됨
   - position 속성의 값으로 **absoulte, fixed**가 지정된 요소는, display 속성이 **block으로 변경**됨
+
+----
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex15.css">플렉스(정렬) Container</a>
+- display : Flex Container의 화면 **출력(보여짐) 특성**
+  - flex : 블록 요소와 같이 Flex Container 정의
+  - inline-flex : 인라인 요소와 같이 Flex Container 정의
+- flex-direction : 주 축을 설정
+  - <span style="color: red;">row</span> : 행 축(좌 => 우)
+  - row-reverse : 행 축 (우 => 좌)
+  - column : 열 축 (위 => 아래)
+  - column-reverse : 열 축 (아래 => 위)
+- flex-wrap : Flex Items 묶음(**줄 바꿈**) 여부
+  - <span style="color: red; background-color: green;">nowrap</span> : 묶음(쭐 바꿈) 없음
+  - wrap : 여러 줄로 묶음
+  - wrap-reverse : wrap의 반대 방향으로 묶음
+- justify-content : **주 축** 의 정렬 방법
+  - <span style="color: red;">flex-start</span> : Flex Items를 시작점으로 정렬
+  - flex-end : Flex Items를 끝점으로 정렬
+  - center : Flex Items를 가운데 정렬
+  - space-between : 각 Flex Item 사이를 균등하게 정렬
+  - space-around : 각 Flex Item의 외부 여백을 균등하게 정렬
+- align-centent : **교차 축** 의 **여러 줄** 정렬 방법
+  - <span style="color: red;">stretch</span> : Flex Items를 시작점으로 정렬
+  - flex-start : Flex Items를 시작점으로 정렬
+  - flex-end : Flex Items를 끝점으로 정렬
+  - center : Flex Items를 가운데 정렬
+  - space-between : 각 Flex Item 사이를 균등하게 정렬
+  - space-around : 각 Flex Item의 외부 여백을 균등하게 정렬
+- <span style="background-color: green;">align-items</span> : **교차 축** 의 **한 줄** 정렬 방법
+  - <span style="color: red;">strech</span> : Flex Items를 교차 축으로 늘림
+  - flex-start : Flex Items를 각 줄의 시작점으로 정렬
+  - flex-end : Flex Items를 각 줄의 끝점으로 정렬
+  - center : Flex Items를 각 줄의 가운데 정렬
+  - baseline : Flex Items를 각 줄의 문자 기준선에 정렬
+- order : Flex Item의 순서
+  - <span style="color: red;">0</span> : 순서 없음
+  - 숫자 : 숫자가 작을 수록 먼저
+- <span style="background-color: green;">flex-grow : Flex Item의 **증가** 너비 비율</span>
+  - <span style="color: red; background-color: green;">0</span> : 증가 비율 없음
+  - 숫자 : 증가 비율
+- flex-shrink : Flex Item의 **감소** 너비 비율
+  - <span style="color: red; background-color: green;">1</span> : Flex Container 너비에 따라 감소 비율 적용
+  - 숫자 : 감소 비율
+- flex-basis : Flex Item의 공간 배분 전 **기본** 너비
+  - <span style="color: red;">auto</span> : 요소의 Content 너비
+  - 단위 : px, em, rem 등 단위로 지정
