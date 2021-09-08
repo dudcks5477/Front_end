@@ -384,3 +384,12 @@ background-attachment: fixed;
 - top, bottom, left, right : 요소의 각 방향별 거리 지정
   - <span style="color: red;">auto</span> : 브라우저가 계산
   - 단위 : px, em, rem 등 단위로 지정
+- 요소 쌓임 순서(Stack order) : **어떤 요소가 사용자와 더 가깝게 있는지(위에 쌓이는지) 결정**
+  1. 요소에 position 속성의 값이 있는 경우 위에 쌓임.(기본값 static 제외)
+  1. 1번 조건이 같은 경우, z-index 속성의 숫자 값이 높을 수록 위에 쌓임
+  1. 1번과 2번 조건까지 같은 경우, HTML의 다음 구조일 수록 위에 쌓임
+- z-index : 요소의 쌓임 정도를 지정
+  - <span style="color: red;">auto</span> : 부모 요소와 동일한 쌓임 정도
+  - 숫자 : 숫자가 높을 수록 위에 쌓임
+- 요소의 display가 변경됨
+  - position 속성의 값으로 **absoulte, fixed**가 지정된 요소는, display 속성이 **block으로 변경**됨
