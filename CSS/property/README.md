@@ -395,7 +395,7 @@ background-attachment: fixed;
   - position 속성의 값으로 **absoulte, fixed**가 지정된 요소는, display 속성이 **block으로 변경**됨
 
 ----
-## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex15.css">플렉스(정렬) Container</a>
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex15.css">플렉스(정렬)</a>
 - display : Flex Container의 화면 **출력(보여짐) 특성**
   - flex : 블록 요소와 같이 Flex Container 정의
   - inline-flex : 인라인 요소와 같이 Flex Container 정의
