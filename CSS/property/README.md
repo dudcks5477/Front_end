@@ -462,3 +462,64 @@ background-attachment: fixed;
   - transition-delay : 전환 효과가 몇 초 뒤에 시작할지 대기시간을 지정
     - <span style="color: red;">0s</span> : 대기시간 없음
     - 시간 : 대기시간(s)을 지정
+
+----
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/CSS/property/css/ex17.css">변환</a>
+- deg : Degree 단어의 약어이다.
+- transform : 변환함수1 변환함수 2 변환함수3 ...;
+- transform : 원근법 이동 크기 회전 기울임;
+  - 요소의 **변환 효과**
+- 2D 변환 함수
+  ```css
+  /* px */
+  translate(x, y) /* 이동(x축, y축) */
+  translateX(x) /* 이동(x축) */
+  translateY(y) /* 이동(y축) */
+
+  /* 없음(배수) */
+  scale(x, y) /* 크기(x축, y축) */
+  scaleX(x) /* 크기(x축) */
+  scaleY(y) /* 크기(y축) */
+
+  /* deg */
+  rotate(degree) /* 회전(각도) */
+  skew(x, y) /* 기울임(x축, y축) */
+  skewX(x) /* 기울임(x축) */
+  skewY(y) /* 기울임(y축) */
+
+  /* 2차원 변환 효과 */
+  matrix(n,n,n,n,n,n)
+  ```
+- 3D 변환 함수
+  ```css
+  /* px */
+  translateZ(z) /* 이동(z축) */
+  translate3d(x, y, z) /* 이동(x축, y축, z축) */
+  perspective(n) /* 원근법(거리), 제일 앞에 작성해야 한다. */
+
+  /* 없음(배수) */
+  scaleZ(z) /* 크기(z축) */
+  scale3d(x, y, z) /* 크기(x축, y축, z축) */
+
+  /* 3차원 변환 효과 */
+  martrix3d(n, n, n, n, n, n, n, n, n, n, n, n, n, n, n, n)
+
+  /* deg */
+  rotateX(x) /* 회전(x축) */
+  rotateY(y) /* 회전(y축) */
+  rotateZ(z) /* 회전(z축) */
+  rotate3d(x, y, z, a) /* 회전(x축, y축, z축, 각도) */
+  ``` 
+- <span style="background-color: green">perspective</span> : 하위 요소를 관찰하는 **원근 거리** 를 지정
+  - 함수가 아닌 CSS 속성
+  - 단위 : px 등 단위로 지정
+  - perspective 속성과 함수 차이점
+
+  속성 / 함수|적용 대상|기준점 설정
+  --|--|--
+  perspective: 600px;|관찰 대상의 부모|perspective-origin
+  transform: perspective(600px)|<span style="background-color: green">관찰 대상</span>|transform-origin 
+
+- <span style="background-color: green">backface-visibility</span> : 3D 변환으로 회전된 요소의 **뒷면 숨김 여부**
+  - <span style="color: red">visible</span> : 뒷면 보임
+  - <span style="background-color: green">hidden</span> : 뒷면 숨김
