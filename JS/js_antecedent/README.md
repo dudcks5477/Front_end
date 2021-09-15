@@ -227,3 +227,134 @@ console.log(hisName); // CHAN
 // 혹은
 console.log(chan.getName()); // CHAN
 ```
+----
+
+## 조건문
+- 조건의 결과(truthy, falsy)에 따라 다른 코드를 실행하는 구문
+- **if, else**
+```js
+let isShow = true;
+let checked = false;
+
+if (isShow) {
+  console.log('Show!'); // Show!
+}
+
+if (checked) {
+  console.log('Checked!');
+}
+```
+```js
+let isShow = true;
+
+if (isShow) {
+  console.log('Show!');
+} else {
+  console.log('Hide?');
+}
+```
+----
+## <a href="https://github.com/dudcks5477/Front-end/tree/master/JS/js_antecedent/js/ex3.js">DOM API</a>
+- Document Object Model, Application Programming Interface
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./main.js"></script>
+</head>
+<body>
+  <div class="box">BOX!!</div>
+</body>
+</html>
+```
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="box">BOX!!</div>
+  <script src="./main.js"></script>
+</body>
+</html>
+```
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script defer src="./main.js"></script>
+</head>
+<body>
+  <div class="box">BOX!!</div>
+</body>
+</html>
+```
+```js
+// HTML 요소(Element) 1개 검색/찾기
+const boxEl = document.querySelector('.box');
+
+// HTML 요소에 적용할 수 있는 메소드
+boxEl.addEventListener();
+
+// 인수(Arguments)를 추가 가능
+boxEl.addEventListener(1, 2);
+
+// 1 - 이벤트(Event, 상황)
+boxEl.addEventListener('click', 2);
+
+// 2 - 핸들러(Handler, 실행할 함수)
+boxEl.addEventListener('click', function () {
+  console.log('Click~!');
+});
+```
+```js
+// HTML 요소(Element) 검색/찾기
+const boxEl = document.querySelector('.box');
+
+// 요소의 클래스 정보 객체 활용
+boxEl.classList.add('active');
+let isContains = boxEl.classList.contains('active');
+console.log(isContains); // true
+
+boxEl.classList.remove('active');
+isContains = boxEl.classList.contains('active');
+console.log(isContains); // false
+```
+```js
+// HTML 요소(Element) 모두 검색/찾기
+const boxEls = document.querySelectorAll('.box')
+console.log(boxEls);
+
+// 찾은 요소들 반복해서 함수 실행
+// 익명 함수를 인수로 추가
+boxEls.forEach(function () {});
+
+// 첫 번째 매개변수(boxEl) : 반복 중인 요소
+// 두 번째 매개변수(index) : 반복 중인 번호
+boxEls.forEach(function (boxEl, index) {});
+
+// 출력
+boxEls.forEach(function (boxEl, index) {
+  boxEl.classList.add(`order-${index + 1}`);
+  console.log(index, boxEl);
+});
+```
+```js
+const boxEl = document.querySelector('.box');
+
+// Getter, 값을 얻는 용도
+console.log(boxEl.textContent); // Box
+
+// Setter, 값을 지정하는 용도
+boxEl.textContent = 'CHAN';
+console.log(boxEl.textContent); // CHAN
+```
