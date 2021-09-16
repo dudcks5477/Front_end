@@ -39,6 +39,8 @@
 > SEO (검색 엔진 최적화, Search Engine Optimization)란,  
 > 구글이나 네이버 등에 자신의 웹 사이트/페이지를 노출할 수 있도록 정보를 최적화하는 작업을 말한다.
 
+----
+
 ## 헤더와 드롭다운 메뉴 - 서브 메뉴
 > URL 해시(Hash)는 몇 가지 쓰임이 있지만,   
 >그중 CSS ID 선택자를 이용해 페이지 내 특정 위치로 이동할 수 있다.
@@ -48,3 +50,36 @@
 > 요소의 원래 위치를 그대로 사용한다.  
 > 만약 position: absolute;를 사용했다면, (위치상) 부모 요소를 기준으로 하므로  
 > 화면의 뷰포트 좌우 끝까지 늘어날 수 없게 된다.
+
+----
+
+## BEM (Block Element Modifier)
+- HTML 클래스 속성의 작명법
+- 요소__일부분 : Underscore(Lodash) 기호로 요소의 일부분을 표시
+- 요소--상태 : Hyphen(Dash) 기호로 요소의 상태를 표시
+```html
+<!-- 예시 1 -->
+<div class="container">
+  <div class="name"></div>
+  <div class="item">
+    <div class="name"></div>
+  </div>
+</div>
+
+<div class="btn primary"></div>
+<div class="btn success"></div>
+<div class="btn error"></div>
+```
+```html
+<!-- 예시 2 -->
+<div class="container">
+  <div class="container__name"></div>
+  <div class="item">
+    <div class="item__name"></div>
+  </div>
+</div>
+
+<div class="btn btn--primary"></div>
+<div class="btn btn--success"></div>
+<div class="btn btn--error"></div>
+```
