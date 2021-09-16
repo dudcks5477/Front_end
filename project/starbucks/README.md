@@ -88,3 +88,22 @@
 > 요소의 전/후 상태를 중간 숫자의 값으로 자연스럽게 만들어 줄 수 있지만,  
 > display 속성처럼 값이 숫자가 아닌 속성은 전/후 상태의 중간값이 존재하지 않기 때문에,  
 > 자연스러운 전환 효과를 적용할 수 없다.
+----
+## 요소 슬라이드 - 수직 슬라이드(Swiper)
+<a href="https://swiperjs.com/get-started">Getting Started With Swiper</a>
+
+### Use Swiper from CDN
+```html
+<!-- HEAD -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+
+<!-- BODY -->
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">1</div>
+    <div class="swiper-slide">2</div>
+    <div class="swiper-slide">3</div>
+  </div>
+</div>
+```
