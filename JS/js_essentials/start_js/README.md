@@ -12,3 +12,17 @@ Math.random() * 10 // 무작위 정수부분 출력
 Maht.floor(Math.random() * 10) // floor를 통해 소수점을 내림(버림)
 ```
 ## [조건문 Switch](https://github.com/dudcks5477/Front_end/blob/master/JS/js_essentials/start_js/js/ex6.js)
+## [반복문 For](https://github.com/dudcks5477/Front_end/blob/master/JS/js_essentials/start_js/js/ex7.js)
+- for (시작조건; 종료조건; 변화조건) {}
+## [변수 유효범위](https://github.com/dudcks5477/Front_end/blob/master/JS/js_essentials/start_js/js/ex8.js)
+- var, let, const
+  - let, const : 블록 레벨
+  - var : 함수 레벨
+## [형 변환](https://github.com/dudcks5477/Front_end/blob/master/JS/js_essentials/start_js/js/ex9.js)
+- Truthy(참 같은 값)
+  - true, {}, [], 1, 2, 'false', -12, '3.14', ...
+- Falsy(거짓 같은 값)
+  - false, '', null, undefiend, 0, -0, NaN
+  ```javascript
+  1 + undefiend // NaN(Not a Number, 숫자데이터지만 숫자가 아니다.)
+  ```
