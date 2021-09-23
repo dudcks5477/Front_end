@@ -45,9 +45,29 @@ $ npm i # node_modules 설치
 $ npm run dev # package.json에서 scripts에 입력한 dev를 사용 (개발용)
 $ npm run build # pakcage.json에서 scripts에 입력한 build를 사용 (사용자들이 볼 수 있는 것들)
 ```
-- ctrl + c : 터미널에서 나가기
+- ctrl + c 또는 q : 터미널에서 나가기
 - 코드 _난독화_ : 작성된 코드를 읽기 어렵게 만드는 작업을 말한다.
   - 빌드된 결과(제품)는 브라우저에서 해석되는 용도로, 용량을 축소하고 읽기 어렵게 만드는 등의 최적화를 거치는 것이 좋다.
   - dist 폴더 안에 들어 있음 (npm run build)
   - parcel-bundler 패키지 안에 있음
 - _번들(Bundle)_ : 우리가 프로젝트 개발에 사용한 여러 모듈(패키지)을 하나로 묶어내는 작업을 말한다.
+
+----
+## 유의적 버전(SemVer)
+```bash
+$ node --version # node 버전 확인
+$ npm --version # npm 버전 확인
+```
+- Major.Minor.Patch
+  - E.g, 12.14.1
+  - Major(12) : 기존 버전과 호환되지 않는 새로운 버전
+  - Minor(14) : 기존 버전과 호환되는 새로운 기능이 추가된 버전
+  - Patch(1) : 기존 버전과 호환되는 버그 및 오타 등이 수정된 버전
+- **^** Major.Minor.Patch
+  - E.g, **^** 12.14.1
+  - Major 버전 안에서 가장 최신 버전으로 업데이트 가능
+```bash
+$ npm info lodash # lodash의 정보 확인
+$ npm install lodash@4.17.20 # 특정 버전을 설치
+$ npm update lodash # 버전 업데이트
+```
