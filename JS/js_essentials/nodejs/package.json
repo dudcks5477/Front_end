@@ -4,7 +4,8 @@
   "description": "- Chrome V8 JavaScript 엔진으로 빌드된 _JavaScript 런타임_.\r   - JavaScript 런타임 : 프로그래밍 언어가 동작하는 환경",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "keywords": [],
   "author": "",
