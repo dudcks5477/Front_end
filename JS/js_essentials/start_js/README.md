@@ -11,3 +11,4 @@ Math.random() // 무작위의 소수
 Math.random() * 10 // 무작위 정수부분 출력
 Maht.floor(Math.random() * 10) // floor를 통해 소수점을 내림(버림)
 ```
+## [조건문 Switch](https://github.com/dudcks5477/Front_end/blob/master/JS/js_essentials/start_js/js/ex6.js)
