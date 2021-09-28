@@ -74,3 +74,26 @@
     - 매개변수
       -  callback : 배열의 각 값에 대해 실행할 함수
   - 자바스크립트 데이터 불변성
+
+----
+## [객체](https://github.com/dudcks5477/Front_end/tree/master/JS/js_level_up/js_data/js/ex4.js)
+### [Object](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object)
+#### Method
+  - prototype이 붙어있지 않다면 정적(static) 메소드다.
+  - Object.assign()
+    - _Object.assign()_ 메소드는 열거할 수 있는 하나 이상의 출처 객체로부터 대상 객체로 속성을 복사할 때 사용한다.
+    - 대상 객체를 반환한다.
+    ```js
+    const target = { a: 1, b: 2 };
+    const source = { b: 4, c: 5 };
+
+    const returnedTarget = Object.assign(target, source);
+
+    console.log(target); // expected output: Object { a: 1, b: 4, c: 5 }
+
+    console.log(returnedTarget); // expected output: Object { a: 1, b: 4, c: 5 }
+    ```
+    - 매개변수
+      - target : 대상 객체
+      - sources : 하나 이상의 출처 객체
+    - 반환 값 : 대상 객체
