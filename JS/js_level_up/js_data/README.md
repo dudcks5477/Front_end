@@ -97,3 +97,32 @@
       - target : 대상 객체
       - sources : 하나 이상의 출처 객체
     - 반환 값 : 대상 객체
+
+----
+## [구조 분해 할당](https://github.com/dudcks5477/Front_end/tree/master/JS/js_level_up/js_data/js/ex5.js)
+
+----
+## [전개 연산자](https://github.com/dudcks5477/Front_end/tree/master/JS/js_level_up/js_data/js/ex6.js)
+  - ...( ) 처럼 사용함
+
+----
+## [불변성](https://github.com/dudcks5477/Front_end/tree/master/JS/js_level_up/js_data/js/ex7.js)
+  - 원시 데이터: String, Number, Boolean, undefiend, null
+  - 참조형 데이터: Object, Array, Function
+    - 불변성이 없다. (가변한다.)
+
+## [얕은 복사와 깊은 복사](https://github.com/dudcks5477/Front_end/tree/master/JS/js_level_up/js_data/js/ex8.js)
+  - 깊은 복사는 lodash라는 패키지의 도움을 받아 실행함
+  ```bash
+  $ npm install lodash
+  ```
+### [lodash Document](https://lodash.com/docs/4.17.15)
+  - _.cloneDeep(value)
+    - This method is like __.clone_ except that it recursively clones _value_.
+    - 재귀 : 반복 실행이라고 생각
+    ```js
+    var objects = [{ 'a': 1 }, { 'b': 2 }];
+
+    var deep = _.cloneDeep(objects);
+    console.log(deep[0] === objects[0]); // => false
+    ```
