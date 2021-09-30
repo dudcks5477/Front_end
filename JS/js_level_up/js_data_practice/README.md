@@ -28,3 +28,39 @@
       - ~~배열(Array)~~: 0 이상의 임의의 종류의 값으로 이루어진 ~~순서가 있는 리스트~~, 대괄호로 나타내며 요소는 쉼표로 구분한다.
       - 객체(Object): 순서가 없는 이름/값 쌍의 집합으로, 이름(키)이 문자열이다.
       - ~~<u>null</u>~~: 빈 값으로 <u>null</u>을 사용한다.
+
+----
+## [Storage](https://github.com/dudcks5477/Front_end/tree/master/JS/js_level_up/js_data_practice/js/ex4.js)
+- [local storage mdn](https://developer.mozilla.org/ko/docs/Web/API/Window/localStorage)
+  - Window.localStorage
+    - _localStorage_ 읽기 전용 속성을 사용하면 **Document 출처**의 **Storage** 객체에 접근할 수 있다.
+    - 저장한 데이터는 브라우저 세션 간에 공유된다.
+    - _localStorage_ 는 **sessionStorage**와 비슷하지만, _localStorage_ 의 데이터는 만료되지 않고 _sessionStorage_ 의 데이터는 페이지 세션이 끝날 때, 즉 페이지를 닫을 때 사라지는 점이 다르다.
+    ```js
+    // 예제
+    localStorage.setItem('myCat', 'Tom');
+
+    const cat = localStorage.getItem('myCat');
+
+    localStorage.removeItem('myCat');
+    ```
+- [lowdb](https://github.com/typicode/lowdb)
+> Small JSON database for Node, Electron and the browser. Powered by Lodash.
+```bash
+$ npm install lowdb
+```
+
+----
+## [OMDb API](https://github.com/dudcks5477/Front_end/tree/master/JS/js_level_up/js_data_practice/js/ex5.js)
+- [omdb api 사이트](https://www.omdbapi.com/)
+- Query String
+  ```bash
+  http://www.omdbapi.com/?apikey=[yourkey]&
+  ```
+  - 주소?속성=값&속성=값&속성=값
+- [axios](https://github.com/axios/axios)
+  - Promise based HTTP client for the browser and node.js
+  - Installing
+    ```bash
+    $ npm install axios
+    ```
