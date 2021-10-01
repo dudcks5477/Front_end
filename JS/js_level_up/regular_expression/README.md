@@ -50,4 +50,12 @@ The quick brown fox jumps over the lazy dog.
 abbcccdddd
 `
 ```
-- 
+
+----
+## [플래그(옵션)](https://github.com/dudcks5477/Front_end/blob/master/JS/js_level_up/regular_expression/js/ex3.js)
+플래그 | 설명
+--|--
+g | 모든 문자 일치(global)
+i | 영어 대소문자를 구분 않고 일치(ignore case)
+m | 여러 줄 일치(multi line)
+- _이스케이프 문자(Escape Character)_ : 백슬래시 기호를 통해 본래의 기능에서 벗어나 상태가 바뀌는 문자를 말한다.
