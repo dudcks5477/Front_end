@@ -71,3 +71,19 @@ Compiled | Interpreted
   $ npx tsc --init # tsconfig.json 생성
   $ npx tsc -w # watch 모드
   ```
+
+----
+## VS Code 설치 및 설정
+### [Visual Studio Code](https://code.visualstudio.com/)
+- **TypeScript Compiler**
+  - **VS Code** 에 컴파일러가 내장되어 있다.
+  - 내장된 컴파일러 버전은 **VS Code** 가 업데이트 되면서 올라간다.
+    - 컴파일러 버전과 **VS Code** 의 버전은 상관 관계가 있다.
+  - 내장된 컴파일러를 선택할수 있고, 직접 설치한 컴파일러를 선택할 수도 있다.
+```bash
+$ npm init -y
+$ npm i typescript -D
+```
+
+----
+## [First Type Annotation](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/test2.ts)
