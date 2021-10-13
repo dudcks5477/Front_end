@@ -161,3 +161,104 @@ let obj = {
 };
 console.log(obj[sym]); // "value"
 ```
+
+----
+## [null & undefined](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/basic_types/ex5.ts)
+- In TypeScript, both undefined and null actually have their types named undefined and null respectively.
+- Much like void, they're not extremely useful on their own:
+  - extremely : 그다지
+- 둘 다 소문자만 존재한다.
+```ts
+// 이 변수들에 할당할 수 있는 것들은 거의 없다.
+let u: undefined = undefiend;
+let n: null = null;
+```
+### undefiend & null are subtypes of all other types
+- 설정을 하지 않으면 그렇다.
+- number에 null 또는 undefiend를 할당할 수 있다는 의미이다.
+- 컴파일 옵션에서 `--strictNullChecks`사용하면, null과 undefiend는 void나 자기 자신들에게만 할당할 수 있다.
+  - null과 undefined를 할당할 수 있게 하려면, union type을 이용해야 한다.
+```ts
+let name: string = null;
+let age: number = undefined;
+
+// strictNullChecks => true
+// Type 'null' is not assignable to type 'string'.
+let name: string = null; // (X)
+
+// null => null || void, undefined => undefiend || void
+// Type 'null' is not assignable to type 'undefiend'.
+let u: undefined = null; // (X)
+
+let v: void = undefined; // (O)
+
+let union: string | null | undefiend = 'str';
+```
+- tsconfig.json 안에 있는 "strict": true를 주석처리 해야한다(꺼야한다).
+```ts
+// tsconfig.json
+// "strict": true
+```
+### null in JavaScript
+- null이라는 값으로 할당된 것을 null이라고 한다.
+- 무언가가 있는데, 사용할 준비가 덜 된 상태
+- null이라는 타입은 null이라는 값만 가질 수 있다.
+- **런타임에서 typeof 연산자를 이용해서 알아내면, object이다.**
+```ts
+let n: null = null;
+
+console.log(n); // null
+console.log(typeof n); // object
+```
+
+### undefiend in JavaScript
+- 값을 할당하지 않은 변수는 undefiend라는 값을 가진다.
+- 무언가가 아예 준비가 안된 상태
+- object의 property가 없을 때도 undefined이다.
+- **런타임에서 typeof 연산자를 이용해서 알아내면, undefiend이다.**
+```ts
+let u: undefined = undefined;
+
+console.log(u); // undefined
+cosnole.log(typeof u); // undefined
+```
+
+----
+## [object](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/basic_types/ex6.ts)
+```ts
+// create by object literal
+const person1 = {name: 'CHAN', age: 24};
+
+// person1 is not "object" type.
+// person1 is "{name: string, age: number}" type
+
+// create by Object.create
+const person2 = Object.create({name: 'CHAN', age: 24});
+```
+- A type that represents the **non-primitive type**
+  - represents : 나타내다
+### non-primitive type
+- **not** number, string, boolean, bigint, symbol, null, or undefined.
+```ts
+let obj: object = {};
+obj = {name: 'CHAN'};
+obj = [{name: 'CHAN'}];
+obj = 24; // Error
+obj = 'CHAN'; // Error
+obj = true; // Error
+obj = 100n; // Error (bigint)
+obj = Symbol(); // Error
+obj = null; // Error
+obj = undefined; // Error
+
+declare function create(o: object | null): void;
+create({ prop: 0 });
+create(null);
+create(42); // Error
+create("string"); // Error
+create(false); // Error
+create(undefined); // Error
+
+// Object.create
+Object.create(0); // Error
+```
