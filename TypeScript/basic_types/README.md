@@ -109,3 +109,55 @@ $ npx tsc # 모든 파일을 compile
 - TypeScript는 16진수 및 10진수 리터럴 외에도, ECMAScript 2015에 도입된 2진수 및 8진수를 지원한다.
 - NaN
 - 1_000_000 과 같은 표기 가능
+
+----
+## [string](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/basic_types/ex3.ts)
+- 다른 언어에서와 마찬가지로 텍스트 형식을 참조하기 위해 'string'형식을 사용한다.
+- JavaScript와 마찬가지로, TypeScript는 문자열 데이터를 둘러싸기 위해 큰 따옴표(")나, 작은 따옴표(')를 사용한다.
+```js
+let name: string = "chan";
+
+name = 'seock';
+```
+### Template String
+- 행에 걸쳐 있거나, 표현식을 넣을 수 있는 문자열
+- 이 문자열은 backtick (= backquote) 기호에 둘러쌓여 있다.
+- 표함된 표현식은 `${expr}` 와 같은 형태로 사용한다.
+```js
+let fullName: string = `Kim Chan`;
+let age: number = 24;
+
+let sentecnce: string = `Hello, my name is ${fullname}. 
+
+I'll be ${age + 1} years old next month.`;
+
+// template string을 사용하지 않을 경우
+let sentece: string = "Hello, my name is " + fullName + ".\n\n" + "I'll be " + {age + 1} + " years old next month.";
+```
+
+----
+## [Symbol](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/basic_types/ex4.ts)
+- ECMAScript 2015의 Symbol이다.
+- new Symbol로 사용할 수 없다.
+- Symbol을 함수로 사용해서 symbol 타입을 만들어낼 수 있다.
+```ts
+console.log(Symbol('foo') === Symbol('foo'));
+```
+- tsconfig.json을 수정해 주어야 함
+```js
+// tsconfig.json
+"lib": [
+  "ES2015",
+  "DOM"
+]
+```
+- 프리미티브 타입의 값을 담아서 사용한다.
+- 고유하고 수정불가능한 값으로 만들어준다.
+- 주로 접근을 제어하는데 쓰는 경우가 많다.
+```ts
+let sym = Symbol();
+let obj = {
+  [sym]: "value"
+};
+console.log(obj[sym]); // "value"
+```
