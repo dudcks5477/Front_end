@@ -262,3 +262,56 @@ create(undefined); // Error
 // Object.create
 Object.create(0); // Error
 ```
+
+----
+## [Array](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/basic_types/ex7.ts)
+- 원래 자바스크립트에서 array는 객체이다.
+- 사용방법
+  - Array<타입>
+  - 타입[]
+```ts
+let list: number[] = [1, 2, 3];
+let list: Array<number> = [1, 2, 3];
+```
+
+----
+## [Tuple](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/basic_types/ex8.ts)
+
+----
+## [any](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/basic_types/ex9.ts)
+- 어떤 타입이어도 상관없는 타입이다.
+- 이걸 최대한 쓰지 않는게 핵심이다.
+- 컴파일 타임에 타입 체크가 정상적으로 이뤄지지 않기 때문이다.
+- 컴파일 옵션 중에는 any를 써야하는데 쓰지 않으면 오류를 뱉도록 하는 옵션도 있다.
+  - nolmplicitAny
+```ts
+function returnAny(message): any {
+  console.log(message);
+}
+returnVoid('리턴은 아무거나');
+```
+- The any will continue to progagate through your objects:
+  - progagate : 전파
+- After all, remember that all the convenience of any comes at the cost of losing type safety.
+- Type safety is one of the main motivations for using TypeScript and you should try to avoid using any when not necessary.
+```ts
+let looselyTyped: any = {};
+let d = looselyTyped.a.b.c.d;
+//  ^ = let d: any
+```
+
+----
+## [unknown](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/basic_types/ex10.ts)
+- We may need to **describe** the type of variables that we do not know when we are writing an application.
+  - describe : 묘사하다.
+- These values may come from **dynamic** content - e.g. from the user - or we may want to **intentionally** accept all values in our API.
+  - dynamic : 동적
+  - intentionally : 의도적으로
+- In these cases, we want to provied a type that tells the compiler and future readders that this variable could be anything, so we give it the unknown type.
+- TypeScript 3.0 버전부터 지원
+- any와 짝으로 any보다 Type-safe 한 타입
+  - any와 같이 아무거나 할당할 수 있다.
+  - 컴파일러가 타입을 추론할 수 있게끔 타입의 유형을 좁히거나 타입을 확정해주지 않으면 다른 곳에 할당 할 수 없고, 사용할 수 없다.
+- unknown 타입을 사용하면 runtime error를 줄일 수 있을 것 같다.
+  - 사용 전에 데이터의 일부 유형의 검사를 수행해야 함을 알리는 API에 사용할 수 있을 것 같다.
+  
