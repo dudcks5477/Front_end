@@ -1,7 +1,7 @@
-function returnVoid(message: string) {
+function returnVoid(message: string): void {
   console.log(message);
 
-  return;
+  return undefined;
 }
 
 returnVoid('리턴이 없다.');
