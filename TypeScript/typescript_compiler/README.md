@@ -1,0 +1,18 @@
+# TypeScript Compiler
+## [Compilation Context](https://basarat.gitbook.io/typescript/project/compilation-context)
+- The compilation context is basically just a fancy term for grouping of the files that TypeScript will parse and analyze to determine what is valid and what isn't.
+- Along with the information about which files, the compilation context contains information about which compiler options are in use.
+- A great way to define this logical grouping (we also like to use the term project) is using a tsconfig.json file.
+
+----
+## [tsconfig shema](http://json.schemastore.org/tsconfig)
+### 최상위 프로퍼티
+- compileOnSave
+- extends
+- compileOptions
+- files
+- include
+- exclude
+- references
+- ~~typeAcquisition~~
+- ~~tsNode~~
