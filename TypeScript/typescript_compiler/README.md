@@ -16,3 +16,67 @@
 - references
 - ~~typeAcquisition~~
 - ~~tsNode~~
+
+----
+## compileOnSave
+```ts
+{
+  ...,
+  "compileOnSaveDefinition": {
+    "properties": {
+      "compileOnSave": {
+        "description": "Enable Compile-on-Save for this project.",
+        "type": "boolean"
+      }
+    }
+  },
+  ...,
+}
+```
+- true / false (default false)
+- 누가 ??
+  - Visual Studio 2015 with TypeScript 1.8.4 이상
+  - atom-typescript 플러그인
+    - https://github.com/TypeStrong/atom-typescript#compile-on-save
+
+----
+## extends
+```ts
+{
+  ...,
+  "extendsDefinition": {
+    "properties": {
+      "extends": {
+        "description": "Path to base configuration file to inherit from. Requires TypeScript version 2.1 or later.",
+        "type": "string"
+      }
+    }
+  },
+  ...,
+}
+```
+- 파일(상대) 경로명: string
+- TypeScript 2.1 New Spec
+```ts
+// in PROJECT/base.json
+{
+  "compilerOptions": {
+    "strict": true
+  }
+}
+
+// in PROJECT/tsconfig.json
+{
+  "extends": "./base.json",
+}
+```
+### [tsconfig/bases](https://github.com/tsconfig/bases)
+```bash
+$ npm install --save-dev @tsconfig/deno
+```
+```ts
+{
+  "extends": "@tsconfig/deno/tsconfig.json",
+  ...
+}
+```
