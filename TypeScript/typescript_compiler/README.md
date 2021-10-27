@@ -308,8 +308,54 @@ $ npm i @types/react -D
     - JavaScript에서는 매개변수에 this를 넣으면, 이미 예약된 키워드라 SyntaxError를 발생시킨다.
     - call / apply / bind와 같이 this를 대체하여 함수 콜을 하는 용도로도 쓰인다.
     - this를 any로 명시적으로 지정하는 것은 합리적이다. (물론 구체적인 사용처가 있는 경우 타입을 표현하기도 한다.)
+    - Class 에서는 this를 사용하면서, noImplicitThis와 관련한 에러가 나지 않는다.
+    - Class 에서 constructor를 제외한 멤버 함수의 첫번째 매개변수도 일반 함수와 마찬가지로 this를 사용할 수 있다.
 - --strictNullChecks
+  > In strict null checking mode, the null and undefiend values are not in the domain of every type and are only assignable to themselves and any (the one exception being that undefiend is also assignable to void).
+  - strictNullChecks 모드에서는, null 및 undefined 값이 모든 유형의 도메인에 속하지 않으며, 그 자신을 타입으로 가지거나, any일 경우에만 할당이 가능하다.
+  - 한 가지 예외는 undefined에 void 할당 가능
+  - strictNullChecks를 적용하지 않으면,
+    - 모든 타입은 null, undefined값을 가질 수 있다.
+    - string으로 타입을 지정해도, null 혹은 undefined 값을 할당할 수 있다는 것이다.
+  - strictNullChecks를 적용하면,
+    - 모든 타입은 null, undefined 값을 가질 수 없고, 가지려면 union type을 이용해서 직접 명시 해야 한다.
+    - any 타입은 null과 undefined를 가진다.
+    - 예외적으로 void 타입의 경우 undefined를 가진다.
+  - strictNullChecks를 적용하지 않고, 어떤 값이 null과 undefined를 가진다는 것을 암묵적으로 인정하고 계속 사용하다 보면, 정확히 어떤 타입이 오는지를 개발자 스스로가 간과할 수 있다.
+  - 정말로 null과 undefined를 가질 수 있는 경우, 해당 값을 조건부로 제외하고 사용하는 것이 좋다.
+  - 이 옵션을 켜고 사용하는 경우,
+    - 사용하려는 함수를 선언할 때부터 매개변수와 리턴 값에 정확한 타입을 지정하려는 노력을 기울여야 하고, 기울이게 될 것이다.
 - --strictFunctionTypes
+  > Disable bivariant parameter checking for function types.
+  - 함수 타입에 대한 bivariant 매개변수 검사를 비활성화한다.
+  - 반환 타입은 공변적(convariant)
+  - 인자 타입은 반공변적(contrabariant)
+  - 타입스크립트에서 인자 타입은 공변적이면서, 반공변적인게 문제
+  - 이 문제를 해결하는 옵션이 strictFunctionTypes
+  - 옵션을 켜면, 에러가 안나던걸 에러 나게 한다.
+  ```ts
+  const button - document.querySelector('#id') as HTMLButtonElement;
+
+  button.addEventListener('keydown', (e: MouseEvent) => {});
+  ```
+  - 이전에는 위와 같은 코드도 에러를 발생시키지 않았지만, 이제는 에러가 발생하게 된다.
 - --strictPropertyInitialization
+  > Ensure non-undefiend class properties are initialized in the constructor.
+  - 정의되지 않은 클래스의 속성이 생성자에게 초기화되었는지 확인한다.
+  - 이 옵션을 사용하려면 --strictNullChecks를 사용하도록 설정해야 한다.
+  - constructor에서 초기값을 할당한 경우 => 정상
+  - constructor에서 안하는 경우
+    - 보통 다른 함수로 이니셜라이즈 하는 경우 (async 함수)
+    - constructor에는 async를 사용할 수 없다. 
 - --strictBindCallApply
+  > Enable stricter checking of the bind, call, and apply methods on functions.
+  - bind, call, apply에 대해 더 엄격한 검사 수행
+    - Function의 내장 함수인 bind / call / apply를 사용할 때, 엄격하게 체크하도록 하는 옵션이다.
+    - bind는 해당 함수안에서 사용할 this와 인자를 설정해주는 역할을 하고 call과 apply는 this와 인자를 설정한 후, 실행까지 한다.
+    - call과 apply는 인자를 설정하는 방식에서 차이점이 있다.
+      - call은 함수의 인자를 여러 인자의 나열로 넣어서 사용하고, apply는 모든 인자를 배열 하나로 넣어서 사용한다.
 - --alwaysStrict
+  > Parse in strict mode and emit "use strict" for each source file
+  - 각 소스 파일에 대해 JavaScript와 strict mode로 코드를 분석하고, "엄격하게 사용"을 해제한다.
+  - syntax에러가 ts error로 나온다.
+  - 컴파일된 JavaScript 파일에 "use strict" 추가 된다.
