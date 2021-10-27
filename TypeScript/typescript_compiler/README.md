@@ -268,3 +268,48 @@ $ npm i @types/react -D
   }
 }
 ```
+### strict
+```ts
+{
+  "strict": {
+    "description": "Enable all strict type checking options.",
+    "type": "boolean",
+    "default": false,
+    "markdownDescription": "Enable all strict type checking options.\n\nSee more: https://www.typescriptlang.org/tsconfig#strict"
+  }
+}
+```
+#### Enable all strict type checking options.
+- --nolmplicitAny
+  > Raise error on expressions and declarations with an implied any type.  
+  - 명시적이지 않게 any 타입을 사용하여, 표현식과 선언에 사용하면, 에러를 발생
+    - 타입스크립트가 추론을 실패한 경우, any가 맞으면, any라고 지정한다.
+    - 아무것도 쓰지 않으면, 에러를 발생
+    - 이 오류를 해결하면, any 라고 지정되어 있지 않은 경우는 any가 아닌 것이다. (타입 추론이 되었으므로)
+  - suppresslmplicitAnyIndexErrors
+    > Suppress --nolmplicitAny errors for indexing objects lacking index signatures.
+    - nolmplicitAny 사용할 때, 인덱스 객체에 인덱스 signature 가 없는 경우 오류가 발생 하는데 이를 예외처리 한다.
+      ```ts
+      // suppressImplicitAnyIndexErrors
+      var obj = {
+        bar: 10
+      };
+
+      obj['foo'] = 10; // Error: Index signature of object type implicitly has an 'any' type
+      obj['bar'] = 10; // Okay
+      obj.baz = 10;
+      ```
+      - obj['foo']로 사용할 때, 인덱스 객체라 판단하여, 타입에 인덱스 시그니처가 없는 경우, 에러를 발생시킨다.
+      - 이때 suppresslmplicitAnyIndexErrors 옵션을 사용하면, 이런 경우 예외로 간주하여, 에러를 발생시키지 않는다.
+- --nolmplicitThis
+  > Raise error on this expressions with an implied any type.
+  - 명시적이지 않게 any 타입을 사용하여, this 표현식에 사용하면, 에러를 발생한다.
+    - 첫번째 매개변수 자리에 this를 놓고, this에 대한 타입을 어떤 것이라도 표현하지 않으면, nolmplicitAny가 오류를 발생시킨다.
+    - JavaScript에서는 매개변수에 this를 넣으면, 이미 예약된 키워드라 SyntaxError를 발생시킨다.
+    - call / apply / bind와 같이 this를 대체하여 함수 콜을 하는 용도로도 쓰인다.
+    - this를 any로 명시적으로 지정하는 것은 합리적이다. (물론 구체적인 사용처가 있는 경우 타입을 표현하기도 한다.)
+- --strictNullChecks
+- --strictFunctionTypes
+- --strictPropertyInitialization
+- --strictBindCallApply
+- --alwaysStrict
