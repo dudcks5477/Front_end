@@ -16,3 +16,9 @@ $ npx tsc # complie
 $ npx tsc
 $ node interface4.js
 ```
+
+----
+## [Class implements interface](https://github.com/dudcks5477/Front_end/blob/master/TypeScript/interfaces/interface5.ts)
+
+----
+## [Interface extends interface](https://github.com/dudcks5477/Front_end/blob/master/TypeScript/interfaces/interface6.ts)
