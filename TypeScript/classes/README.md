@@ -7,7 +7,7 @@
 - TypeScript에서는 클래스도 사용자가 만드는 타입의 하나
 
 ----
-## [Quick Start - class](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/classes/)
+## [Quick Start - class](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/classes/example.ts)
 ```bash
 $ npm init -y
 $ npm i typescript -D
