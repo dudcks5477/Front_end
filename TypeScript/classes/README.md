@@ -29,3 +29,11 @@ $ npx tsc
 - 프로퍼티를 선언하는 곳 또는 생성자에서 값을 할당하지 않는 경우에는 ! 를 붙여서 위험을 표현한다.
 - 클래스의 프로퍼티가 정의되어 있지만, 값을 대입하지 않으면 undefined 이다.
 - 생성자에는 async 를 설정할 수 없다.
+
+----
+## [접근 제어자 (Access Modifiers)](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/classes/example3.ts)
+- 접근 제어자에는 public, private, protected가 있다.
+- 설정하지 않으면 public 이다.
+- 클래스 내부의 모든 곳에 (생성자, 프로퍼티, 메서드) 설정 가능하다.
+- private으로 설정하면 클래스 외부에서 접근할 수 없다.
+- 자바스크립트에서 private 지원하지 않아 오랜동안 프로퍼티나 메서드 이름 앞에 _를 붙여서 표현했다.
