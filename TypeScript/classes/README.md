@@ -40,3 +40,6 @@ $ npx tsc
 
 ----
 ## [Initialization in constructor parameters](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/classes/example4.ts)
+
+----
+## [Getters & Setters](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/classes/example5.ts)
