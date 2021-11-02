@@ -37,3 +37,6 @@ $ npx tsc
 - 클래스 내부의 모든 곳에 (생성자, 프로퍼티, 메서드) 설정 가능하다.
 - private으로 설정하면 클래스 외부에서 접근할 수 없다.
 - 자바스크립트에서 private 지원하지 않아 오랜동안 프로퍼티나 메서드 이름 앞에 _를 붙여서 표현했다.
+
+----
+## [Initialization in constructor parameters](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/classes/example4.ts)
