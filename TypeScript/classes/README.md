@@ -46,3 +46,6 @@ $ npx tsc
 
 ----
 ## [Readonly properties](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/classes/example6.ts)
+
+----
+## [Index Signatures in class](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/classes/example7.ts)
