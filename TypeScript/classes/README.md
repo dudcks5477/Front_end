@@ -43,3 +43,6 @@ $ npx tsc
 
 ----
 ## [Getters & Setters](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/classes/example5.ts)
+
+----
+## [Readonly properties](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/classes/example6.ts)
