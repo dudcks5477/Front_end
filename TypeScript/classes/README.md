@@ -49,3 +49,6 @@ $ npx tsc
 
 ----
 ## [Index Signatures in class](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/classes/example7.ts)
+
+----
+## [Static Properties & Methods](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/classes/example8.ts)
