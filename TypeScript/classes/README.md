@@ -52,3 +52,6 @@ $ npx tsc
 
 ----
 ## [Static Properties & Methods](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/classes/example8.ts)
+
+----
+## [Singletons](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/classes/example9.ts)
