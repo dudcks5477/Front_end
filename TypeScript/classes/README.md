@@ -55,3 +55,6 @@ $ npx tsc
 
 ----
 ## [Singletons](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/classes/example9.ts)
+
+----
+## [상속(Inheritance)](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/classes/example10.ts)
