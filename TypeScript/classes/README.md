@@ -58,3 +58,6 @@ $ npx tsc
 
 ----
 ## [상속(Inheritance)](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/classes/example10.ts)
+
+----
+## [Abstract Classes](https://github.com/dudcks5477/Front_end/tree/master/TypeScript/classes/example11.ts)
