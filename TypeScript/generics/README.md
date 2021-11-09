@@ -7,3 +7,6 @@ $ npx tsc --init
 
 ----
 ## [What's different from Generics andany?](https://github.com/dudcks5477/Front_end/blob/master/TypeScript/generics/generic1.ts)
+
+----
+## [Generics Basic](https://github.com/dudcks5477/Front_end/blob/master/TypeScript/generics/generic2.ts)
