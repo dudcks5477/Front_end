@@ -10,3 +10,6 @@ $ npx tsc --init
 
 ----
 ## [Generics Basic](https://github.com/dudcks5477/Front_end/blob/master/TypeScript/generics/generic2.ts)
+
+----
+## [Generics Array & Tuple](https://github.com/dudcks5477/Front_end/blob/master/TypeScript/generics/generic3.ts)
