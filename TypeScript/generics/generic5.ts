@@ -10,4 +10,4 @@ class Person<T, K> {
 
 new Person('Chan', 24);
 // new Person<string>(39);
-new Person<string, number>('Chan', 'age')
+new Person<string, number>('Chan', 'age');
