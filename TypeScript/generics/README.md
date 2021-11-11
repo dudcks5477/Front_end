@@ -13,3 +13,6 @@ $ npx tsc --init
 
 ----
 ## [Generics Array & Tuple](https://github.com/dudcks5477/Front_end/blob/master/TypeScript/generics/generic3.ts)
+
+----
+## [Generics Function](https://github.com/dudcks5477/Front_end/blob/master/TypeScript/generics/generic4.ts)
