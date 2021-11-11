@@ -16,3 +16,6 @@ $ npx tsc --init
 
 ----
 ## [Generics Function](https://github.com/dudcks5477/Front_end/blob/master/TypeScript/generics/generic4.ts)
+
+----
+## [Generics Class](https://github.com/dudcks5477/Front_end/blob/master/TypeScript/generics/generic5.ts)
