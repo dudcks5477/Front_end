@@ -21,3 +21,4 @@ $ npx tsc --init
 ## [Generics Class](https://github.com/dudcks5477/Front_end/blob/master/TypeScript/generics/generic5.ts)
 
 ----
+## [Generics with extends]((https://github.com/dudcks5477/Front_end/blob/master/TypeScript/generics/generic6.ts))
