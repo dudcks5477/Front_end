@@ -22,3 +22,6 @@ $ npx tsc --init
 
 ----
 ## [Generics with extends](https://github.com/dudcks5477/Front_end/blob/master/TypeScript/generics/generic6.ts)
+
+----
+## [Keyof & Type lookup system](https://github.com/dudcks5477/Front_end/blob/master/TypeScript/generics/generic7.ts)
