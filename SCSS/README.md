@@ -62,3 +62,19 @@ body
 $ npm init -y
 $ npm i -D parcel-bundler
 ```
+
+## 주석
+```html
+<div class="container">
+  <h1>Hello SCSS!</h1>
+</div>
+```
+```scss
+.container {
+  h1 {
+    color: royalblue;
+    /* background-color: orange; */
+    // font-size: 60px;
+  }
+}
+```
