@@ -109,3 +109,74 @@ $ npm i -D parcel-bundler
 }
 ```
 - [sassMeister](https://www.sassmeister.com/)
+
+----
+## 상위(부모) 선택자 참조
+- & - 상위 선택자 참조
+```scss
+.btn {
+  position: absoulte;
+  &.active {
+    color: red;
+  }
+}
+
+.list {
+  li {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+```
+- 치환 : 바꾸어 놓는 일
+```scss
+.fs {
+  &-small { font-size: 12px; }
+  &-medium { font-size: 14px; }
+  &-large { font-size: 16px; }
+}
+```
+
+----
+## 중첩된 속성
+```scss
+.box {
+  font: {
+    weight: bold;
+    size: 10px;
+    family: sans-serif;
+  };
+  margin: {
+    top: 10px;
+    left: 20px;
+  };
+  padding: {
+    top: 10px;
+    bottom: 40px;
+    left: 20px;
+    right: 30px;
+  };
+}
+```
+- **네임스페이스**란 이름을 통해 구분 가능한 범위를 만들어내는 것으로 일종의 유효범위를 지정하는 방법을 말한다.
+
+----
+## 변수
+```scss
+// $size: 200px; // 전역변수
+
+.container {
+  $size: 200px; // 유효범위 (container 안에서만 사용 가능)
+  position: fixed;
+  top: $size;
+  .item {
+    width: $size;
+    height: $size;
+    transform: translateX($size);
+  }
+}
+.box {
+  width: $size; // error
+}
+```
