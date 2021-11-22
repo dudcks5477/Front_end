@@ -57,12 +57,14 @@ body
 ```
 - CSS Preprocessor (CSS 전처리기)
 
+----
 ## 프로젝트 생성
 ```bash
 $ npm init -y
 $ npm i -D parcel-bundler
 ```
 
+----
 ## 주석
 ```html
 <div class="container">
@@ -74,7 +76,36 @@ $ npm i -D parcel-bundler
   h1 {
     color: royalblue;
     /* background-color: orange; */
-    // font-size: 60px;
+    // font-size: 60px; // scss -> css 로 컴파일 될 때 사라짐
   }
 }
 ```
+
+----
+## 중첩 with SassMesiter
+```html
+<div class="container">
+  <ul>
+    <li>
+      <div class="name">CHAN</div>
+      <div class="age">98</div>
+    </li>
+  </ul>
+</div>
+```
+```scss
+.container {
+  ul {
+    li {
+      font-size: 40px;
+      .name {
+        color: red;
+      }
+      .age {
+        color: green;
+      }
+    }
+  }
+}
+```
+- [sassMeister](https://www.sassmeister.com/)
