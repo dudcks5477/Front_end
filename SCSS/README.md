@@ -171,12 +171,11 @@ $ npm i -D parcel-bundler
   position: fixed;
   top: $size;
   .item {
+    $size: 100px;
     width: $size;
     height: $size;
     transform: translateX($size);
   }
-}
-.box {
-  width: $size; // error
+  left: $size;
 }
 ```
