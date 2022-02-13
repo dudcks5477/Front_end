@@ -9,7 +9,17 @@
 - i, em : 텍스트 기울임
 - small : 폰트 작게
 - cite : 저작권
-
+- img : 이미지 삽입
+  - alt : 이미지가 출력이 안될 시 이미지 설명
+- a : 하이퍼링크, 클릭시 해당 페이지로 연결 시켜줌
+  - href : 연결 될 페이지의 주소
+  - target="_blank" : 링크를 클릭 시 새 탭으로 열리게 해줌
+- mark : 강조 표시
+- sup : 글자 위로 올리기
+- s : 취소선
+- sub : 글자 아래로 내리기
+- hr : 선 (잘 안씀)
+- blockquote : 저작권이 걸려있는 문단을 가져올 때 사용 (cite 속성으로 해당 주소 써놓기)
 
 [CSS](https://github.com/dudcks5477/Front_end/tree/master/CSS)  
 [JavaScript](https://github.com/dudcks5477/Front_end/tree/master/JS)
