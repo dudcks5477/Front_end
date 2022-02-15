@@ -33,6 +33,8 @@ square : 불릿 대신 네모를 사용한다 | type="A" : 숫자 대신 영대�
   - td : table data의 약자로 표의 칸을 의미
     - rowspan, colspan : 열, 행 병합
 
+----
+
 ## inline 요소
 ```html
 <a> <b> <br> <button> <cite> <em> <i> <img> <input> <label> <script> <select> <small> <span> <strong> <sub> <sup> <textarea>
@@ -91,6 +93,103 @@ inline 요소와 block 요소의 특징을 혼합
 ### `<article>`
 - 독립적으로 재사용되거나 반복적으로 나타나는 구획
 - 게시판이나 뉴스, 갤러리의 목록상 각 항목
+
+----
+
+## `<form>`
+- 정보 제출에 사용되는 문서 구획
+- 내부 입력 양식들의 부모, 컨테이너 역할
+- 입력된 정보들을 어떻게 서버에 전달할지 설정
+- 내부에 폼 관련 태그가 아닌 요소도 포함 가능
+
+속성 | 역할 | 값
+-|-|-
+id | 고유 값(이전의 name을 대체) | 
+~~name~~ | id를 사용할 것 | 텍스트
+method | 입력된 정보들의 전달 방식 | get, post
+action | 정보들을 처리할 서버상의 프로그램 지정 | 텍스트
+autocomplete | 이전 입력 내역 있을 시 자동완성 | on, off
+
+> `<form>` 태그 없이도 정보 제출이 가능하지만, 활용시 여러 유용한 기능들이 있다.
+
+## 폼 요소
+### `<label>`
+각 입력 양식의 레이블을 표시 <br>
+_★_ 입력 양식의 **클릭 가능 영역** 확장
+
+속성 | 역할 | 값
+-|-|-
+for | 어떤 입력 양식의 레이블인지 지정 | 해당 입력 양식 요소의 id값
+
+### `<input>`
+공통 속성 | 역할 | 값 | 비고
+-|-|-|-
+id | 고유값, label과 연결 | 텍스트 |
+autocomplete | 자동완성 | boolean |
+autofocus | 페이지로 들어올 때 커서가 위치 | boolean | 페이지에서 하나만 사용되어야 한다.
+disabled | 수정 불가, 값이 전송되지 않는다. | boolean |
+name | 서버로 전송될 항목명 | 텍스트 |
+readonly | 수정 불가, 입력된 값은 전송된다. | boolean |
+
+`<input type="text">` : 일반 텍스트 입력  
+`<input type="password">` : 패스워드 입력 (●●● 등으로 표시)  
+`<input type="tel">` : 전화번호 입력 (모바일 등에서 전화번호 키패드 표시)  
+속성 | 역할 | 값
+-|-|-
+placeholder | 입력값이 공백일 시 보여질 텍스트 | 텍스트
+maxlength | 최대 글자 수 | 숫자  
+  
+`<input type="number">` : 숫자값 입력  
+속성 | 역할 | 값
+-|-|-
+max | 최대 입력값 | 숫자
+min | 최소 입력값 | 숫자
+step | 입력 가능한 값의 간격 (2: 0, 2, 4, 8) | 숫자  
+  
+`<input type="checkbox">` : 체크박스  
+속성 | 역할 | 값
+-|-|-
+checked | 체크로 초기화 여부 | boolean  
+  
+`<input type="radio">` : 라디오(택일)
+속성 | 역할 | 값
+-|-|-
+checked | 체크로 초기화 여부 | boolean
+name | 속한 선택지의 구분자 | 텍스트
+  
+`<input type="file">` : 파일 첨부
+속성 | 역할 | 값
+-|-|-
+multiple | 여러 파일 가능 여부 | boolean
+
+### `<select>`와 `<option>`
+`<select>` : 선택자
+속성 | 역할 | 값
+-|-|-
+id | 고유값, label과 연결 | 텍스트
+name | 서버로 전송될 항목명 | 텍스트
+
+`<option>` : 선택 항목
+속성 | 역할 | 값 | 비고
+-|-|-|-
+value | 서버로 전송될 값 | 텍스트 |
+selected | 선택 여부 | boolean | `<select>` 당 하나의 `<option>`에만 가능
+
+### `<textarea>` 
+여러 줄의 텍스트를 입력할 수 있는 태그
+속성 | 역할 | 값
+-|-|-
+placeholder | 입력값이 공백일 시 보여질 텍스트 | 텍스트
+maxlength | 최대 글자 수 | 숫자
+rows | 보이는 줄의 수 | 숫자
+
+### `<button>`
+속성 | 역할 | 값
+-|-|-
+type | 버튼의 역할 | _submit_, ~reset~, _button_
+disabled | 비활성화 | boolean
+
+_[주의]_ 제출용 버튼이 아닐 시 type을 '**button**'으로 지정할 것
 
 [CSS](https://github.com/dudcks5477/Front_end/tree/master/CSS)  
 [JavaScript](https://github.com/dudcks5477/Front_end/tree/master/JS)
