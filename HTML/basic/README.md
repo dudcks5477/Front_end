@@ -191,5 +191,6 @@ disabled | 비활성화 | boolean
 
 _[주의]_ 제출용 버튼이 아닐 시 type을 '**button**'으로 지정할 것
 
-[CSS](https://github.com/dudcks5477/Front_end/tree/master/CSS)  
+
+[CSS](https://github.com/dudcks5477/Front_end/tree/master/CSS/basic)  
 [JavaScript](https://github.com/dudcks5477/Front_end/tree/master/JS)
