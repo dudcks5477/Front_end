@@ -1,0 +1,169 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+span {
+  font-family: 'Nanum Brush Script', cursive;
+} */
+
+/* span { font-size: 24px; }
+span { font-size: 1.5em; } */
+/* span { font-size: 1.5rem; } */
+
+/* span { font-weight: 900; } */
+/* span { font-weight: bolder; } */
+/* body {font-weight: 100 ;} */
+
+/* span {
+  font-style: italic;
+  font-style: oblique;
+} */
+
+/* span { color: red; } */
+/* span { color: rgb(0, 255, 0); } */
+/* span { color: rgba(0, 0, 255, 0.5); } */
+/* span { color: #FFFF00; } */
+
+/* .underline { text-decoration: underline; }
+.overline { text-decoration: overline; }
+.line-through { text-decoration: line-through; } */
+
+/* span { letter-spacing: 0.1em; } */
+
+/* p { text-align: left; } */
+/* p { text-align: right; } */
+/* p { text-align: center; } */
+p { text-align: justify; }
+
+/* p { line-height: 24px; } */
+/* p { line-height: 1.25; } */
+/* p { line-height: 1.25em; } */
+p { line-height: 125%; }
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+span { opacity: 0.5; }
+
+/* body {
+  padding: 0;
+  margin: 0;
+} */
+/* .outer {
+  width: 80%;
+  height: 640px;
+  background-color: red;
+}
+.inner { 
+  background-color: green; 
+} */
+/* .inner {
+  width: 400px;
+  height: 300px;
+} */
+/* .inner {
+  width: 50%;
+  height: 50%;
+} */
+/* .inner {
+  width: 50vw;
+  height: 50vh;
+} */
+/* .inner {
+  width: 50vmin;
+  height: 50vmax;
+} */
+/* .inner {
+  width: calc(100% - 100px);
+  height: calc(50vh + 200px);
+} */
+
+/* 기본세팅 */
+/* body {
+  padding: 0;
+  margin: 0;
+}
+.outer {
+  background-color: red;
+}
+.inner {
+  color: white;
+  background-color: green;
+} */
+/* .inner {
+  margin: 24px;
+} */
+/* .inner {
+  margin-top: 24px;
+  margin-right: 48px;
+  margin-bottom: 0;
+  margin-left: 12px;
+} */
+/* .inner {
+  margin: 24px 48px 0px 18px;
+} */
+/* .inner {
+  margin: 10px 48px;
+} */
+
+/* .outer {
+  padding: 24px;
+} */
+/* .outer {
+  padding-top: 24px;
+  padding-right: 48px;
+  padding-bottom: 0px;
+  padding-left: 18px;
+} */
+/* .outer {
+  padding: 24px 48px 0px 18px;
+} */
+
+/* div {
+  margin: 24px;
+  padding: 24px;
+} */
+/* div {
+  border: 1px solid black;
+} */
+/* div {
+  border-top: 1px solid black;
+  border-right: 2px dashed red;
+  border-bottom: 3px dotted green;
+  border-left: 0;
+} */
+
+/* div {
+  width: 400px;
+  height: 400px;
+  line-height: 400px;
+  text-align: center;
+  color: red;
+  background-color: green;
+  border: 1px solid blue;
+} */
+/* div {
+  border-radius: 30px;
+} */
+/* div {
+  border-radius: 30%;
+} */
+/* div {
+  border-radius: 10px 20px 30% 40%;
+} */
+
+body { background-color:red; }
+div {
+  background-color: green;
+  width: 320px;
+  height: 120px;
+  border-radius: 16px;
+}
+
+div {
+  /* box-shadow: 1px 2px 3px blue; */
+  /* box-shadow: 2px 3px 4px rgba(0, 0, 255, 0.9); */
+  box-shadow: 
+    0 0 4px blue,
+    2px 2px 8px rebeccapurple,
+    4px 2px 12px gainsboro;
+}

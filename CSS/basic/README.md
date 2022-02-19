@@ -155,3 +155,435 @@ div ul li:hover { background-color: #222; }
 - _인라인 스타일_ > _id 선택자_ > _class 선택자_ > _태그 선택자_
 - 구체적일수록 높은 순위
 - 같은 우선순위라면 다음에(더 아랫줄) 오늘 것이 덮어씀
+
+----
+
+## CSS 기본 스타일
+### 글꼴, 글 관련 스타일
+_상속_ 됨 : 부모의 스타일이 자식 스타일에도 적용
+
+#### _font-family_ : 글꼴 그룹
+> 사용자의 컴퓨터에 지정한 폰트가 없을 때를 대비하여 여럿 지정
+```css
+p { font-family: 돋움; }
+p { font-family: "맑은 고딕", 돋움, 굴림; }
+```
+
+_★_ 웹 폰트 사용
+- [구글 폰트 사용해보기](https://fonts.google.com/)
+
+#### _font-size_ : 글자 크기
+단위 | 설명 | 비고
+-|-|-
+_px_ | 절대 크기 : 모니터상의 한 점 | 사용자가 브라우저를 통해 조정 불가 : **낮은 접근성**
+_em_ | 상대 크기 : 바로 윗 부모의 크기에 비례 | 중첩마다 제곱
+_rem_ | 상대 크기 : 최상위 조상의 크기에 비례 | 일반적으로 body의 글자 크기: 16px
+```html
+일반 텍스트
+<span>바깥쪽 span
+  <span>중간 span
+    <span>안쪽 span
+    </span>
+  </span>
+</span>
+```
+```css
+span { font-size: 24px; }
+```
+```css
+span { font-size: 1.5em; }
+```
+```css
+span { font-size: 1.5rem; }
+```
+
+#### _font-weight_ : 글자 굵기
+값 | 설명 | 비고
+-|-|-
+_100 ~ 900_ | 절대값 | 100 단위로 입력
+_normal_ | 일반 굵기 | 400
+_bold_ | 두껍게 | 700, 자주 사용됨
+_lighter_ , _bolder_ | 상속보다 얇거나 두껍게 | 정도는 값마다 다름
+```css
+span { font-weight: 900; }
+```
+```css
+span { font-weight: bold; }
+```
+```css
+body { font-weight: 100; }
+span { font-weight: bolder; }
+```
+
+#### _font-style_ : 글자 스타일
+값 | 설명 | 비고
+-|-|-
+_normal_ | 일반 서체 |
+_italic_ | 기울임 | 기울여 쓴 서체 - 주로 사용됨
+_oblique_ | 기울임 | 본 서체를 기울인 것
+
+#### _color_ : 글자 색
+```html
+일반 텍스트 <span>글자색 적용</span>
+```
+```css
+span { color: blue; }
+```
+```css
+/* 빨강 + 초록 + 파랑 (0~255) */
+span { color: rgb(0, 0, 255); }
+```
+```css
+/* 빨강 + 초록 + 파랑 (0~255) + 불투명도 (0~1) */
+span { color: rgba(0, 0, 255, 0.5); }
+```
+```css
+/* 16진수 표기 */
+span { color: #FF0000; }
+```
+> Google에 rgb(a)값, #hax 값 또는 _color picker_ 검색
+
+#### _text-decoration_ : 글자에 선 긋기
+```html
+<span>일반</span>
+<span class="underline">밑줄</span>
+<span class="overline">윗줄</span>
+<span class="line-through">취소선</span>
+```
+```css
+.none { text-decoration: none; }
+.underline { text-decoration: underline; }
+.overline { text-decoration: overline; }
+.line-through { text-decoration: line-through; }
+```
+
+#### _letter-spacing_ : 자간 조정
+```html
+일반 텍스트
+<span>자간이 조정된 텍스트</span>
+```
+```css
+span { letter-spacing: 0.1em; }
+```
+
+#### text-align_ : 텍스트 정렬
+> block, inline-block, table 요소
+
+_left_ | _right_ | _center_ | _justify_
+```html
+  <p>
+    Cascading Style Sheets(CSS)는 HTML이나 XML(SVG, XHTML 같은 XML 방언(dialect) 포함)로 작성된 문서의 표현을 기술하기 위해 쓰이는 스타일시트 언어입니다. CSS는 요소가 화면, 종이, 음성이나 다른 매체 상에 어떻게 렌더링되어야 하는지 기술합니다.<br>
+    CSS는 오픈 웹의 핵심 언어 중 하나이며 여러 브라우저가 표준으로 사용하는 W3C 명세가 있습니다. 레벨 단위로 개발한 CSS1은 더 이상 사용하지 않고, 다음 레벨인 CSS2.1은 권고안(recommendation)입니다. 더 작은 모듈로 나눈 CSS3은 표준화 과정을 밟고 있습니다.
+  </p>
+```
+```css
+/* left, right, center, justify */
+p { text-align: left; }
+```
+
+#### _line-height_ : 행간
+```css
+p { line-height: 24px; }
+```
+```css
+p { line-height: 1.25; }
+```
+```css
+p { line-height: 1.25em; }
+```
+```css
+p { line-height: 125%; }
+```
+
+#### _list-style_ : ul 목록의 불릿 없애기
+```html
+<ul>
+  <li>못생긴</li>
+  <li>불릿은</li>
+  <li>이제 그만</li>
+</ul>
+```
+```css
+ul {
+  list-style: none;
+  padding: 0;
+}
+```
+
+#### _opacity_ : 불투명도
+```html
+<span>오퍼시티가 적용된 요소</span>
+```
+```css
+span {
+  opacity: 0.5;
+}
+```
+
+### 상자 관련 스타일
+#### _width_ , _height_ : 높이와 너비
+단위 | 설명
+-|-
+_px_ | 절대 크기 : 모니터상의 한 점
+_%_ | 상대 크기 : 바로 윗 부모의 크기에 비례
+_vw_ | 상대 크기 : 뷰포트 너비의 1/100
+_vh_ | 상대 크기 : 뷰포트 높이의 1/100
+_vmax_ | 상대 크기 : 뷰포트 너비, 높이 중 긴 쪽의 1/100
+_vmin_ | 상대 크기 : 뷰포트 너비, 높이 중 짧은 쪽의 1/100
+```html
+<div class="outer">
+  <div class="inner"></div>
+</div>
+```
+```css
+body {
+  padding: 0;
+  margin: 0;
+}
+.outer {
+  width: 80%;
+  height: 640px;
+  background-color: red;
+}
+.inner { 
+  background-color: green; 
+}
+```
+```css
+.inner {
+  width: 400px;
+  height: 300px;
+}
+```
+```css
+.inner {
+  width: 50%;
+  height: 50%;
+}
+```
+```css
+.inner {
+  width: 50vw;
+  height: 50vh;
+}
+```
+```css
+.inner {
+  width: 50vmin;
+  height: 50vmax;
+}
+```
+```css
+.inner {
+  width: calc(100% - 100px);
+  height: calc(50vh + 200px);
+}
+```
+
+#### _margin_ : 바깥쪽 여백
+```html
+<div class="outer">
+  <div class="inner">inner div</div>
+  <div class="inner">inner div</div>
+  <div class="inner">inner div</div>
+</div>
+```
+```css
+/* 기본세팅 */
+body {
+  padding: 0;
+  margin: 0;
+}
+.outer {
+  background-color: red;
+}
+.inner {
+  color: white;
+  background-color: green;
+}
+```
+```css
+.inner {
+  margin: 24px;
+}
+```
+```css
+.inner {
+  margin-top: 24px;
+  margin-right: 48px;
+  margin-bottom: 0;
+  margin-left: 12px;
+}
+```
+```css
+.inner {
+  margin: 24px 48px 0 12px;
+}
+```
+```css
+.inner {
+  margin: 10px 48px;
+}
+```
+
+#### _padding_ : 안쪽 여백
+```css
+.outer {
+  padding: 24px;
+}
+```
+```css
+.outer {
+  padding-top: 24px;
+  padding-right: 48px;
+  padding-bottom: 0px;
+  padding-left: 18px;
+}
+```
+
+#### _border_ : 테두리 선
+border: (_선 굵기_) (_선 스타일_) (_선 색_);
+선스타일 | 설명
+-|-
+solid | 직선
+dashed | 점이 긴 점선
+dotted | 점선
+> [더 자세히 보기](https://developer.mozilla.org/ko/docs/Web/CSS/border-style)
+
+```html
+<div>테두리가 있는 div</div>
+```
+```css
+/* 기본 세팅 */
+div {
+  margin: 24px;
+  padding: 24px;
+}
+```
+```css
+div {
+  border: 1px solid black;
+}
+```
+
+#### _border-radius_ : 둥근 모서리
+```html
+<div>둥근 모서리</div>
+```
+```css
+/* 기본 세팅 */
+div {
+  width: 400px;
+  height: 400px;
+  line-height: 400px;
+  text-align: center;
+  color: red;
+  background-color: green;
+  border: 1px solid blue;
+}
+```
+```css
+div {
+  border-radius: 30px;
+}
+```
+```css
+div {
+  border-radius: 30%;
+}
+```
+```css
+div {
+  border-radius: 10px 20px 30% 40%;
+}
+```
+
+#### _background_ : 배경
+속성 | 설명
+-|-
+_background-color_ | 배경색
+_background-image_ | 배경 이미지
+_background-size_ | 배경 이미지 크기
+_background-position_ | 배경 이미지 위치
+_background-repeat_ | 배경 이미지 반복 여부
+
+```html
+<div><div>
+```
+```css
+/* 기본 세팅 */
+div {
+  width: 480px;
+  height: 360px;
+  border: 1px solid black;
+}
+```
+```css
+div { 
+  background-color: green; 
+}
+```
+```css
+div { 
+  background-color: rgba(255, 255, 0, 0.5); 
+}
+```
+```css
+div {
+  background-image: url("./nature.jpg");
+}
+```
+```css
+div {
+  background-image: url("./nature.jpg");
+  background-size: 480px 360px;
+}
+```
+```css
+div {
+  background-image: url("./nature.jpg");
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  background-position: 50px 50%;
+}
+```
+```css
+div {
+  /* 비율 유지, 상자에 빈 곳이 없도록 꽉 채움 */
+  background-image: url("./nature.jpg");
+  background-size: cover;
+}
+```
+```css
+div {
+  /* 비율 유지, 상자를 벗어나지 않도록 꽉 채움 */
+  background-image: url("./nature.jpg");
+  background-size: contain;
+}
+```
+
+#### _box-shadow_ : 그림자
+box-shadow: (_x축 위치_) (_y축 위치_) ([옵션]_번짐_) (_색상_);
+```html
+<div></div>
+```
+```css
+/* 기본 세팅 */
+body { background-color: lightgray; }
+div {
+  background-color: white;
+  width: 320px;
+  height: 120px;
+  border-radius: 16px;
+}
+```
+```css
+div {
+  box-shadow: 1px 1px black;
+}
+```
+```css
+div {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+```
