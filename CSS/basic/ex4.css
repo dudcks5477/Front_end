@@ -1,0 +1,68 @@
+/* span {
+  font-size: 24px;
+  color: red;
+  background-color: green;
+  border: 2px solid blue;
+} */
+
+/* span { position: relative; }
+span:nth-child(1) { top: 12px; }
+span:nth-child(2) { right: 12px; }
+span:nth-child(3) { bottom: 12px; }
+span:nth-child(4) { left: 12px; } */
+
+/* div {
+  width: 400px;
+  height: 400px;
+}
+.relative {
+  position: relative;
+  background-color: green;
+}
+.absolute {
+  position: absolute;
+}
+.absolute._1 {
+  top: 100px;
+  left: 25%;
+  background-color: red;
+  z-index: 2;
+}
+.absolute._2 {
+  top: 200px;
+  left: 50%;
+  background-color: blue;
+  z-index: 1;
+} */
+
+/* .tall {
+  margin: 48px;
+  width: 200px;
+  height: 5000px;
+  background-color: red;
+}
+.fixed {
+  position: fixed;
+  top: 24px;
+  left: 80px;
+  width: 300px;
+  height: 100px;
+  background-color: green;
+} */
+
+/* 기본 세팅 */
+/* body > div > * {
+  background-color: red;
+} */
+/* body > div > * {display: inline;} */
+/* body > div > * {display: block;} */
+/* body > div > * {display: inline-block;} */
+
+body > div > * {
+  background-color: red;
+  display: inline-block;
+  padding: 24px;
+}
+/* body > div > span {display: none;} */
+/* body > div > span {visibility: hidden;} */
+body > div > span {opacity: 0;}
