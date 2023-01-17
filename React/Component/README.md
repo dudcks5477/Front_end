@@ -98,3 +98,27 @@ ReactDOM.render(
       document.querySelector("#root")
     );
 ```
+
+---
+
+## JSX
+- JSX 문법으로 작성된 순수한 JavaScript로 컴파일하여 사용한다.
+- 누가 해주나? => [babel](https://babeljs.io)
+### 왜 JSX을 쓸까?
+- React.createElement VS JSX
+  - 가독성 완승
+- babel과 같은 컴파일 과정에서 문법적 오류를 인지하기 쉬움
+### JSX 문법
+- 최상위 요소가 하나여야 한다.
+- 최상위 요소 리턴하는 경우, () 로 감싸야 한다.
+- 자식들을 바로 랜더링하고 싶으면, <>자식들</>를 사용한다. => Fragment
+- 자바스크립트 표현식을 사용하려면, {표현식}를 이용한다.
+- if문은 사용할 수 없다.
+  - 삼항 연산자 혹은 && 를 사용한다.
+- style을 이용해 인라인 스타일링이 가능하다.
+- class 대신 className을 사용해 class를 적용할 수 있다.
+- 자식요소가 있으면, 꼭 닫아야 하고, 자식요소가 없으면 열면서 닫아야 한다.
+  ```html
+  <p>어쩌구</p>
+  <br />
+  ```
