@@ -122,3 +122,27 @@ ReactDOM.render(
   <p>어쩌구</p>
   <br />
   ```
+
+---
+## Event Handling
+- HTML DOM에 클릭하면 이벤트가 발생하고, 발생하면 그에 맞는 변경이 일어나도록 해야한다.
+- JSX에 이벤트를 설정할 수 있다.
+```js
+class Comp extends React.Component {
+  render() {
+    return {
+      <div>
+        <button onClick={() => {
+          console.log('clicked');
+        }}>클릭</button>
+      </div>
+    };
+  }
+}
+```
+- camelCase로만 사용할 수 있다.
+  - onClick, onMouseEnter
+- 이벤트에 연결된 자바스크립트 코드는 함수이다.
+  - 이벤트={함수} 와 같이 쓴다.
+- 실제 DOM 요소들에만 사용 가능하다.
+  - 리액트 컴포넌트에 사용하면, 그냥 props로 전달한다.

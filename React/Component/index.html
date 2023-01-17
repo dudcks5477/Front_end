@@ -20,23 +20,47 @@
     console.log(React);
     console.log(ReactDOM);
 
-    // 우리가 작성한 어떤 코드 => 순수하게 실행할 수 있는 자바스크립트
-    // babel
+    // function Component() {
+    //   return <div><button 
+    //     onClick={() => {
+    //       console.log("clicked");
+    //   }}>
+    //   클릭
+    //   </button></div>
+    // }
 
-    const title = "주제!!!";
+    class Component extends React.Component {
+      state = {
+        count: 0,
+      };
+      // constructor(props) {
+      //   super(props);
 
-    ReactDOM.render(
-      <div a="a">
-        <div>
-          <h1>{title}</h1>
-          <ul>
-            <li>React</li>
-            <li>Vue</li>
-          </ul>  
-        </div>  
-      </div>,
-      document.querySelector('#root')
-    );
+      //   this.click = this.click.bind(this);
+      // }
+      render() {
+        return (
+          <div>
+            <p>{this.state.count}</p>
+            <button
+              onClick={this.click}                
+                
+            >
+            클릭
+            </button>
+          </div>
+        );
+      }
+
+      click= () => {
+        console.log("clicked");
+        this.setState((state) => ({
+          ...state, count: state.count + 1
+        }));
+      }
+    }
+
+    ReactDOM.render(<Component/>, document.querySelector("#root"))
   </script>
 </body>
 </html>
