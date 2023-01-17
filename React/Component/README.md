@@ -146,3 +146,56 @@ class Comp extends React.Component {
   - 이벤트={함수} 와 같이 쓴다.
 - 실제 DOM 요소들에만 사용 가능하다.
   - 리액트 컴포넌트에 사용하면, 그냥 props로 전달한다.
+
+---
+
+## Component Lifecycle
+### Declarative
+- Design simple view for each state in your application, and React will efficiently update and render just the right components when your data changes.
+### Component 생성 및 마운트 (< v16.3)
+- constructor
+- componentWillMount
+- **render (최초 랜더)**
+- componentDidMount
+### Component props, state 변경 (< v16.3)
+- componentWillReceiveProps
+- shouldComponentUpdate
+- componentWillUpdate
+- **render**
+- componentDidUpdate
+### componentWillReceiveProps
+- props를 새로 지정했을 때 바로 호출된다.
+- 여기는 state의 변경에 반응하지 않는다.
+  - 여기서 props의 값에 따라 state를 변경해야 한다면
+    - setState를 이용해 state를 변경한다.
+    - **그러면 다음 이벤트로 각각 가는 것이 아니라 한번에 변경된다.**
+### shouldComponentUpdate
+- props만 변경되어도
+- state만 변경되어도
+- props & state 둘 다 변경되어도
+- newProps와 newState를 인자로 해서 호출
+- return type이 boolean이다.
+  - true면 render
+  - false면 render가 호출되지 않는다.
+  - 이 함수를 구현하지 않으면, 디폴트는 true
+### componentWillUpdate
+- 컴포넌트가 재 랜더링 되기 직전에 불린다.
+- 여기선 setState같은 것을 쓰면 안된다.
+### componentDidUpdate
+- 컴포넌트가 재 랜더링을 마치면 불린다.
+### Component 언마운트(< v16.3)
+- componentWillUnmount
+### Component 라이프사이클 변경(v16.3)
+- constructor
+- ~~componentWillMount~~ => **getDerivedStateFromProps**
+- render
+- componentDidMount
+- ~~componentWillReceiveProps~~ => **getDerivedStateFromProps**
+- shouldComponentUpdate
+- render
+- ~~componentWillUpdate~~ => **getSnapshotBeforeUpdate**
+- (dom에 적용)
+- componentDidUpdate
+- componentWillUnmount
+### Component 에러 캐치
+- componentDidCatch
