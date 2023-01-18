@@ -108,3 +108,13 @@ aria-current: string
 ---
 
 ## JS로 라우팅 이동하기
+
+---
+
+## Redirect
+```js
+import { Redirect } from 'react-router-dom';
+
+// jsx
+<Redirect to ="/" />
+```
