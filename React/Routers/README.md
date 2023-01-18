@@ -87,3 +87,20 @@ export default function Profile(props) {
 - 여러 Route 중 순서대로 먼저 맞는 하나만 보여준다.
 - exact를 뺄 수 있는 로직을 만들 수 있다.
 - 가장 마지막에 어디 path에도 맞지 않으면 보여지는 컴포넌트를 설정해서, "Not Found" 페이지를 만들 수 있다.
+
+---
+
+## JSX 링크로 라우팅 이동하기
+```
+<NavLink>
+activeClassName: String
+activeStyle: object
+exact: bool
+strict: bool
+isActive: func
+location: object
+aria-current: string
+```
+- import{ **NavLink** } from **'react-router-dom'**;
+- activeClassName, activeStyle처럼 active 상태에 대한 스타일 지정이 가능하다.
+- Route의 path처럼 동작하기 때문에 exact가 잇다.
