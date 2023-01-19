@@ -18,3 +18,6 @@ npm i tailwindcss
 ```bash
 npx tailwind init
 ```
+
+## example
+![demo](./dist/img/demo.PNG)
