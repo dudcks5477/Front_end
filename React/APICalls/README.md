@@ -63,3 +63,16 @@ npm i nodemon -D # 자동 새로고침
 npm i graphql
 npm install @apollo/server graphql
 ```
+
+---
+### typeDef와 reslover
+#### typeDef(s)
+- GraphQL Schema를 정의하는 곳
+  - Object
+  - Query
+  - Mutation
+  - Input
+- gql과 Tagged Template Literals로 작성한다.
+#### resolver(s)
+- Schema에 해당하는 구현을 하는 곳
+- 요청을 받아 데이터를 조회, 수정, 삭제
