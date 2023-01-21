@@ -49,3 +49,17 @@ axios.delete(
   { headers: `Bearer ${token}` },
 );
 ```
+
+---
+
+### Apollo를 이용해서 Node.js 서버 만들기
+```bash
+npm init -y
+npm i apollo-server # Apollo 라이브러리 다운
+npm i nodemon -D # 자동 새로고침
+```
+- [Apollo Github](https://github.com/apollographql/apollo-server)
+```bash
+npm i graphql
+npm install @apollo/server graphql
+```
