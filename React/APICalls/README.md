@@ -77,7 +77,3 @@ npm install @apollo/server graphql
 - Schema에 해당하는 구현을 하는 곳
 - 요청을 받아 데이터를 조회, 수정, 삭제
 
----
-
-### 데이터 추가하기
-

@@ -1,6 +1,6 @@
 import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
-const { readFileSync } = require('fs');
+import { readFileSync } from "fs";
 
 // The GraphQL schema
 const typeDefs = `#graphql
@@ -11,6 +11,8 @@ const typeDefs = `#graphql
   }
   type Mutation {
     addBook(title: String, message: String, author: String, url: String): Book
+    editBook(bookId: Int, title: String, message: String, author: String, url: String): Book
+    deleteBook(bookId: Int): Book
   }
   type Book {
     bookId: Int
@@ -43,7 +45,37 @@ const resolvers = {
         JSON.stringify([ ... books, newBook])
       );
       return newBook;
-    }
+    },
+    editBook: (parent, args, context, info) => {
+      const books = JSON.parse(readFileSync(join(__dirname, "books.json")).toString());
+
+      const newBooks = books.map(book => {
+        if (book.bookId === args.bookId) {
+          return args;
+        } else {
+          return book;
+        }
+      });
+
+      writeFileSync(
+        join(__dirname, "books.json"),
+        JSON.stringify([ ... books, newBook])
+      );
+      return args;
+    },
+    delete: (parent, args, context, info) => {
+      const books = JSON.parse(readFileSync(join(__dirname, "books.json")).toString());
+
+      const deleted = books.find(book => book.bookID === args.bookId);
+
+      const newBooks = books.filter((book) => book.bookId !== args.bookId);
+
+      writeFileSync(
+        join(__dirname, "books.json"),
+        JSON.stringify([ ... books, newBook])
+      );
+      return deleted;
+    },
   }
 };
 
