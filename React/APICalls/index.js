@@ -9,6 +9,9 @@ const typeDefs = `#graphql
     books: [Book]
     book(bookId: Int): Book
   }
+  type Mutation {
+    addBook(title: String, message: String, author: String, url: String): Book
+  }
   type Book {
     bookId: Int
     title: String
@@ -30,6 +33,18 @@ const resolvers = {
       return books.find(book => book.bookId === args.bookId);
     },
   },
+  Mutation: {
+    addBook: (parent, args, context, info) => {
+      const books = JSON.parse(readFileSync(join(__dirname, "books.json")).toString());
+      const maxId = Math.max( ... books.map(book => book.bookId));
+      const newBook =  { ...args, bookId: maxId + 1}
+      writeFileSync(
+        join(__dirname, "books.json"),
+        JSON.stringify([ ... books, newBook])
+      );
+      return newBook;
+    }
+  }
 };
 
 const server = new ApolloServer({
