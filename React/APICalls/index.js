@@ -1,10 +1,19 @@
 import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
+const { readFileSync } = require('fs');
 
 // The GraphQL schema
 const typeDefs = `#graphql
   type Query {
     hello: String
+    books: [Book]
+  }
+  type Book {
+    bookId: Int
+    title: String
+    message: String
+    author: String
+    url: String
   }
 `;
 
@@ -12,6 +21,9 @@ const typeDefs = `#graphql
 const resolvers = {
   Query: {
     hello: () => 'world',
+    books: () => {
+      return JSON.parse(readFileSync(join(__dirname, "books.json")).toString());
+    },
   },
 };
 

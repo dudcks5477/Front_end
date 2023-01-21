@@ -65,7 +65,7 @@ npm install @apollo/server graphql
 ```
 
 ---
-### typeDef와 reslover
+### typeDef와 resolver
 #### typeDef(s)
 - GraphQL Schema를 정의하는 곳
   - Object
@@ -76,3 +76,7 @@ npm install @apollo/server graphql
 #### resolver(s)
 - Schema에 해당하는 구현을 하는 곳
 - 요청을 받아 데이터를 조회, 수정, 삭제
+
+---
+
+### 여러개의 데이터 조회하기
