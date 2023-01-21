@@ -79,4 +79,5 @@ npm install @apollo/server graphql
 
 ---
 
-### 여러개의 데이터 조회하기
+### 특정 데이터 조회하기
+

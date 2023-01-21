@@ -7,6 +7,7 @@ const typeDefs = `#graphql
   type Query {
     hello: String
     books: [Book]
+    book(bookId: Int): Book
   }
   type Book {
     bookId: Int
@@ -23,6 +24,10 @@ const resolvers = {
     hello: () => 'world',
     books: () => {
       return JSON.parse(readFileSync(join(__dirname, "books.json")).toString());
+    },
+    book: (parent, args, context, info) => {
+      const books = JSON.parse(readFileSync(join(__dirname, "books.json")).toString());
+      return books.find(book => book.bookId === args.bookId);
     },
   },
 };
