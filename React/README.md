@@ -9,3 +9,5 @@
 ## [Styling](https://github.com/dudcks5477/Front_end/tree/master/React/Styling)
 
 ## [API Calls](https://github.com/dudcks5477/Front_end/tree/master/React/APICalls)
+
+## [Testing](https://github.com/dudcks5477/Front_end/tree/master/React/Testing) 
