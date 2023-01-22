@@ -206,7 +206,7 @@ describe('use async test', () => {
 ```
 
 ---
-## React Component Test
+## [React Component Test](https://github.com/dudcks5477/Front_end/tree/master/React/Testing/react-component-test)
 ```bash
 npx create-react-app [폴더명]
 npm test
