@@ -204,3 +204,10 @@ describe('use async test', () => {
   });
 });
 ```
+
+---
+## React Component Test
+```bash
+npx create-react-app [폴더명]
+npm test
+```
