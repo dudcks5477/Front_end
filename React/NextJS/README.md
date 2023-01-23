@@ -24,3 +24,6 @@ npm init -y
 npm install next react react-dom
 ```
 - crate-next-app
+```bash
+npx create-react-app [폴더명]
+```
